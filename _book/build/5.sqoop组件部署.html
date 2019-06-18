@@ -1,0 +1,586 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>SQOOP搭建 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="6.hbase组件部署.html" />
+    
+    
+    <link rel="prev" href="4.hive组件部署.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    前言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    平台搭建
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="jdkmysql.html">
+            
+                <a href="jdkmysql.html">
+            
+                    
+                    jdk、mysql安装、环境变量配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="1.hadoop伪分布式部署.html">
+            
+                <a href="1.hadoop伪分布式部署.html">
+            
+                    
+                    HADOOP伪分布式搭建
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="2.hadoop全分布式部署.html">
+            
+                <a href="2.hadoop全分布式部署.html">
+            
+                    
+                    HADOOP完全分布式搭建
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="3.hadoopha部署.html">
+            
+                <a href="3.hadoopha部署.html">
+            
+                    
+                    HADOOPHA搭建
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="4.hive组件部署.html">
+            
+                <a href="4.hive组件部署.html">
+            
+                    
+                    HIVE搭建
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2.6" data-path="5.sqoop组件部署.html">
+            
+                <a href="5.sqoop组件部署.html">
+            
+                    
+                    SQOOP搭建
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="6.hbase组件部署.html">
+            
+                <a href="6.hbase组件部署.html">
+            
+                    
+                    HBASE搭建
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="7.flume组件部署.html">
+            
+                <a href="7.flume组件部署.html">
+            
+                    
+                    FLUME搭建
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.9" data-path="8.spark组件部署.html">
+            
+                <a href="8.spark组件部署.html">
+            
+                    
+                    SPARK搭建
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.10" data-path="9.kafka组件部署.html">
+            
+                <a href="9.kafka组件部署.html">
+            
+                    
+                    KAFKA搭建
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.11" data-path="10.storm组件部署.html">
+            
+                <a href="10.storm组件部署.html">
+            
+                    
+                    STORM搭建
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.12" data-path="11.zookeeper组件部署.html">
+            
+                <a href="11.zookeeper组件部署.html">
+            
+                    
+                    ZOOKEEPER搭建
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    数据采集
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../spider/requests+pymysql.html">
+            
+                <a href="../spider/requests+pymysql.html">
+            
+                    
+                    requsts+pymysql
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../spider/scrapy.html">
+            
+                <a href="../spider/scrapy.html">
+            
+                    
+                    Scrapy
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../spider/flume采集本地文件到hdfs.html">
+            
+                <a href="../spider/flume采集本地文件到hdfs.html">
+            
+                    
+                    Flume
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../spider/jsoup.html">
+            
+                <a href="../spider/jsoup.html">
+            
+                    
+                    Jsoup
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >SQOOP搭建</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="sqoophive&#x4E0E;&#x4F20;&#x7EDF;&#x6570;&#x636E;&#x5E93;&#x6570;&#x636E;&#x4F20;&#x9012;&#x7EC4;&#x4EF6;&#x7684;&#x642D;&#x5EFA;">sqoop(hive&#x4E0E;&#x4F20;&#x7EDF;&#x6570;&#x636E;&#x5E93;&#x6570;&#x636E;&#x4F20;&#x9012;&#x7EC4;&#x4EF6;)&#x7684;&#x642D;&#x5EFA;</h1>
+<h2 id="&#x6CE8;&#x610F;&#xFF1A;&#x4E0B;&#x8F7D;sqoop&#x7248;&#x672C;&#x4E00;&#x5B9A;&#x8981;&#x4E0E;hadoop&#x7248;&#x672C;&#x5BF9;&#x5E94;">&#x6CE8;&#x610F;&#xFF1A;&#x4E0B;&#x8F7D;sqoop&#x7248;&#x672C;&#x4E00;&#x5B9A;&#x8981;&#x4E0E;hadoop&#x7248;&#x672C;&#x5BF9;&#x5E94;</h2>
+<p><img src="https://img-blog.csdn.net/20180820101358877?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzIxMTUzNjE5/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt=""></p>
+<h2 id="&#x5F00;&#x59CB;&#x642D;&#x5EFA;&#xFF1A;">&#x5F00;&#x59CB;&#x642D;&#x5EFA;&#xFF1A;</h2>
+<ol>
+<li><p>&#x914D;&#x7F6E;&#x73AF;&#x5883;&#x53D8;&#x91CF;</p>
+<pre><code>SQOOP_HOME=/usr/local/sqoop1.4.6
+PATH=$PATH:$JAVA_HOME/bin:$HADOOP_HOME/bin:$HIVE_HOME/bin:$HBASE_HOME/bin:$SQOOP_HOME/bin
+</code></pre><p>&#x7528;<code>source</code>&#x5237;&#x65B0;&#x73AF;&#x5883;&#x53D8;&#x91CF;</p>
+</li>
+<li><p>&#x4FEE;&#x6539;&#x914D;&#x7F6E;&#x6587;&#x4EF6;<br> 2.1 &#x8FDB;&#x5165;sqoop&#x7684;conf&#x76EE;&#x5F55;&#xFF0C;&#x8F93;&#x5165; cp sqoop-env-template.sh sqoop-env.sh &#x590D;&#x5236;&#x5E76;&#x91CD;&#x547D;&#x540D;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#xFF0C;&#x63A5;&#x7740;&#x8F93;&#x5165; vi sqoop-env.sh &#x4FEE;&#x6539;&#x914D;&#x7F6E;&#x6587;&#x4EF6;</p>
+<pre><code> export HADOOP_COMMON_HOME=/usr/local/hadoop/hadoop-2.7.3/
+
+ export HADOOP_MAPRED_HOME=/usr/local/hadoop/hadoop-2.7.3/
+
+ export HBASE_HOME=/usr/local/hbase/hbase-1.2.4/
+
+ export HIVE_HOME=/usr/local/hive/apache-hive-0.13.0-bin/
+</code></pre><p> 2.2 &#x5C06;mysql&#x7684;&#x9A71;&#x52A8;jar&#x5305;&#x653E;&#x5230;sqoop&#x7684;lib&#x76EE;&#x5F55;&#x4E0B;
+ <img src="https://img-blog.csdn.net/20180820101359758?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzIxMTUzNjE5/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="">  </p>
+</li>
+</ol>
+<h2 id="&#x642D;&#x5EFA;&#x5B8C;&#x6210;">&#x642D;&#x5EFA;&#x5B8C;&#x6210;</h2>
+<hr>
+<p>(&#x91CD;&#x8981;)&#xFF1A;sqoop&#x5B66;&#x4E60;</p>
+<pre><code>[hadoop@hadoop3 ~]$ sqoop list-tables \
+&gt; --connect jdbc:mysql://hadoop1:3306/mysql \
+&gt; --username root \
+&gt; --password root
+</code></pre><p>&#x521B;&#x5EFA;&#x4E00;&#x5F20;&#x8DDF;mysql&#x4E2D;&#x7684;help_keyword&#x8868;&#x4E00;&#x6837;&#x7684;hive&#x8868;hk&#xFF1A;</p>
+<pre><code>sqoop create-hive-table \
+--connect jdbc:mysql://hadoop1:3306/mysql \
+--username root \
+--password root \
+--table help_keyword \
+--hive-table hk
+</code></pre><h2 id="&#x666E;&#x901A;&#x5BFC;&#x5165;&#xFF1A;&#x5BFC;&#x5165;mysql&#x5E93;&#x4E2D;&#x7684;helpkeyword&#x7684;&#x6570;&#x636E;&#x5230;hdfs&#x4E0A;">&#x666E;&#x901A;&#x5BFC;&#x5165;&#xFF1A;&#x5BFC;&#x5165;mysql&#x5E93;&#x4E2D;&#x7684;help_keyword&#x7684;&#x6570;&#x636E;&#x5230;HDFS&#x4E0A;</h2>
+<p>&#x5BFC;&#x5165;&#x7684;&#x8DEF;&#x5F84;&#xFF1A;/user/hadoop11/my_help_keyword1</p>
+<pre><code>sqoop import   \
+--connect jdbc:mysql://hadoop1:3306/mysql   \
+--username root  \
+--password root   \
+--table help_keyword   \
+--target-dir /user/hadoop11/my_help_keyword1  \
+--fields-terminated-by &apos;\t&apos;  \
+-m 2
+</code></pre><p>&#x5BFC;&#x5165;&#x6570;&#x636E;&#xFF1A;&#x5E26;where&#x6761;&#x4EF6;</p>
+<pre><code>sqoop import   \
+--connect jdbc:mysql://hadoop1:3306/mysql   \
+--username root  \
+--password root   \
+--where &quot;name=&apos;STRING&apos; &quot; \
+--table help_keyword   \
+--target-dir /sqoop/hadoop11/myoutport1  \
+-m 1
+</code></pre><p>&#x67E5;&#x8BE2;&#x6307;&#x5B9A;&#x5217;</p>
+<pre><code>sqoop import   \
+--connect jdbc:mysql://hadoop1:3306/mysql   \
+--username root  \
+--password root   \
+--columns &quot;name&quot; \
+--where &quot;name=&apos;STRING&apos; &quot; \
+--table help_keyword  \
+--target-dir /sqoop/hadoop11/myoutport22  \
+-m 1
+selct name from help_keyword where name = &quot;string&quot;
+</code></pre><p>&#x5BFC;&#x5165;&#xFF1A;&#x6307;&#x5B9A;&#x81EA;&#x5B9A;&#x4E49;&#x67E5;&#x8BE2;SQL</p>
+<pre><code>sqoop import   \
+--connect jdbc:mysql://hadoop1:3306/  \
+--username root  \
+--password root   \
+--target-dir /user/hadoop/myimport33_1  \
+--query &apos;select help_keyword_id,name from mysql.help_keyword where $CONDITIONS and name = &quot;STRING&quot;&apos; \
+--split-by  help_keyword_id \
+--fields-terminated-by &apos;\t&apos;  \
+-m 4
+</code></pre><h2 id="&#x628A;mysql&#x6570;&#x636E;&#x5E93;&#x4E2D;&#x7684;&#x8868;&#x6570;&#x636E;&#x5BFC;&#x5165;&#x5230;hive&#x4E2D;">&#x628A;MySQL&#x6570;&#x636E;&#x5E93;&#x4E2D;&#x7684;&#x8868;&#x6570;&#x636E;&#x5BFC;&#x5165;&#x5230;Hive&#x4E2D;</h2>
+<p>Sqoop &#x5BFC;&#x5165;&#x5173;&#x7CFB;&#x578B;&#x6570;&#x636E;&#x5230; hive &#x7684;&#x8FC7;&#x7A0B;&#x662F;&#x5148;&#x5BFC;&#x5165;&#x5230; hdfs&#xFF0C;&#x7136;&#x540E;&#x518D; load &#x8FDB;&#x5165; hive</p>
+<p>&#x666E;&#x901A;&#x5BFC;&#x5165;&#xFF1A;&#x6570;&#x636E;&#x5B58;&#x50A8;&#x5728;&#x9ED8;&#x8BA4;&#x7684;default hive&#x5E93;&#x4E2D;&#xFF0C;&#x8868;&#x540D;&#x5C31;&#x662F;&#x5BF9;&#x5E94;&#x7684;mysql&#x7684;&#x8868;&#x540D;&#xFF1A;</p>
+<pre><code>sqoop import   \
+--connect jdbc:mysql://hadoop1:3306/mysql   \
+--username root  \
+--password root   \
+--table help_keyword   \
+--hive-import \
+-m 1
+</code></pre><p>&#x5BFC;&#x5165;&#x8FC7;&#x7A0B;:</p>
+<pre><code>&#x7B2C;&#x4E00;&#x6B65;&#xFF1A;&#x5BFC;&#x5165;mysql.help_keyword&#x7684;&#x6570;&#x636E;&#x5230;hdfs&#x7684;&#x9ED8;&#x8BA4;&#x8DEF;&#x5F84; 
+&#x7B2C;&#x4E8C;&#x6B65;&#xFF1A;&#x81EA;&#x52A8;&#x4EFF;&#x9020;mysql.help_keyword&#x53BB;&#x521B;&#x5EFA;&#x4E00;&#x5F20;hive&#x8868;, &#x521B;&#x5EFA;&#x5728;&#x9ED8;&#x8BA4;&#x7684;default&#x5E93;&#x4E2D; 
+&#x7B2C;&#x4E09;&#x6B65;&#xFF1A;&#x628A;&#x4E34;&#x65F6;&#x76EE;&#x5F55;&#x4E2D;&#x7684;&#x6570;&#x636E;&#x5BFC;&#x5165;&#x5230;hive&#x8868;&#x4E2D;
+</code></pre><h1 id="&#x628A;mysql&#x6570;&#x636E;&#x5E93;&#x4E2D;&#x7684;&#x8868;&#x6570;&#x636E;&#x5BFC;&#x5165;&#x5230;hbase">&#x628A;MySQL&#x6570;&#x636E;&#x5E93;&#x4E2D;&#x7684;&#x8868;&#x6570;&#x636E;&#x5BFC;&#x5165;&#x5230;hbase</h1>
+<p>&#x6B64;&#x65F6;&#x4F1A;&#x62A5;&#x9519;&#xFF0C;&#x56E0;&#x4E3A;&#x9700;&#x8981;&#x5148;&#x521B;&#x5EFA;Hbase&#x91CC;&#x9762;&#x7684;&#x8868;&#xFF0C;&#x518D;&#x6267;&#x884C;&#x5BFC;&#x5165;&#x7684;&#x8BED;&#x53E5;</p>
+<pre><code>hbase(main):001:0&gt; create &apos;new_help_keyword&apos;, &apos;base_info&apos;
+0 row(s) in 3.6280 seconds
+
+=&gt; Hbase::Table - new_help_keyword
+hbase(main):002:0&gt;
+</code></pre><p>&#x666E;&#x901A;&#x5BFC;&#x5165;</p>
+<pre><code>sqoop import \
+--connect jdbc:mysql://hadoop1:3306/mysql \
+--username root \
+--password root \
+--table help_keyword \
+--hbase-table new_help_keyword \
+--column-family person \
+--hbase-row-key help_keyword_id
+</code></pre><p><a href="https://blog.csdn.net/lijingshan34/article/details/81316118" target="_blank">&#x6269;&#x5C55;&#x5B66;&#x4E60;</a></p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="4.hive组件部署.html" class="navigation navigation-prev " aria-label="Previous page: HIVE搭建">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="6.hbase组件部署.html" class="navigation navigation-next " aria-label="Next page: HBASE搭建">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"SQOOP搭建","level":"1.2.6","depth":2,"next":{"title":"HBASE搭建","level":"1.2.7","depth":2,"path":"build/6.hbase组件部署.md","ref":"build/6.hbase组件部署.md","articles":[]},"previous":{"title":"HIVE搭建","level":"1.2.5","depth":2,"path":"build/4.hive组件部署.md","ref":"build/4.hive组件部署.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"build/5.sqoop组件部署.md","mtime":"2019-06-18T06:13:38.814Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-06-18T09:33:16.013Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

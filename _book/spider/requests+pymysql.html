@@ -1,0 +1,592 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>requsts+pymysql · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="scrapy.html" />
+    
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    前言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    平台搭建
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../build/jdkmysql.html">
+            
+                <a href="../build/jdkmysql.html">
+            
+                    
+                    jdk、mysql安装、环境变量配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../build/1.hadoop伪分布式部署.html">
+            
+                <a href="../build/1.hadoop伪分布式部署.html">
+            
+                    
+                    HADOOP伪分布式搭建
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../build/2.hadoop全分布式部署.html">
+            
+                <a href="../build/2.hadoop全分布式部署.html">
+            
+                    
+                    HADOOP完全分布式搭建
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../build/3.hadoopha部署.html">
+            
+                <a href="../build/3.hadoopha部署.html">
+            
+                    
+                    HADOOPHA搭建
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../build/4.hive组件部署.html">
+            
+                <a href="../build/4.hive组件部署.html">
+            
+                    
+                    HIVE搭建
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../build/5.sqoop组件部署.html">
+            
+                <a href="../build/5.sqoop组件部署.html">
+            
+                    
+                    SQOOP搭建
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="../build/6.hbase组件部署.html">
+            
+                <a href="../build/6.hbase组件部署.html">
+            
+                    
+                    HBASE搭建
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="../build/7.flume组件部署.html">
+            
+                <a href="../build/7.flume组件部署.html">
+            
+                    
+                    FLUME搭建
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.9" data-path="../build/8.spark组件部署.html">
+            
+                <a href="../build/8.spark组件部署.html">
+            
+                    
+                    SPARK搭建
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.10" data-path="../build/9.kafka组件部署.html">
+            
+                <a href="../build/9.kafka组件部署.html">
+            
+                    
+                    KAFKA搭建
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.11" data-path="../build/10.storm组件部署.html">
+            
+                <a href="../build/10.storm组件部署.html">
+            
+                    
+                    STORM搭建
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.12" data-path="../build/11.zookeeper组件部署.html">
+            
+                <a href="../build/11.zookeeper组件部署.html">
+            
+                    
+                    ZOOKEEPER搭建
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    数据采集
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.3.1" data-path="requests+pymysql.html">
+            
+                <a href="requests+pymysql.html">
+            
+                    
+                    requsts+pymysql
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="scrapy.html">
+            
+                <a href="scrapy.html">
+            
+                    
+                    Scrapy
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="flume采集本地文件到hdfs.html">
+            
+                <a href="flume采集本地文件到hdfs.html">
+            
+                    
+                    Flume
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="jsoup.html">
+            
+                <a href="jsoup.html">
+            
+                    
+                    Jsoup
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >requsts+pymysql</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x722C;&#x53D6;&#x667A;&#x8054;&#x62DB;&#x8058;&#x5B9E;&#x8BAD;">&#x722C;&#x53D6;&#x667A;&#x8054;&#x62DB;&#x8058;&#x5B9E;&#x8BAD;</h1>
+<h2 id="&#x524D;&#x671F;&#x77E5;&#x8BC6;&#x638C;&#x63E1;&#x8981;&#x6C42;">&#x524D;&#x671F;&#x77E5;&#x8BC6;&#x638C;&#x63E1;&#x8981;&#x6C42;:</h2>
+<p>&#x719F;&#x7EC3;&#x638C;&#x63E1;:<br>requests<br>pymysql<br><a href="https://9035.gitee.io/spiderintroduce/" target="_blank">&#x5165;&#x95E8;&#x5B66;&#x4E60;</a></p>
+<h2 id="&#x76EE;&#x6807;">&#x76EE;&#x6807;</h2>
+<p>&#x722C;&#x53D6;&#x667A;&#x8054;&#x62DB;&#x8058;&#x7F51;&#x6570;&#x636E;&#xFF0C;&#x5E76;&#x5B58;&#x50A8;&#x5230;mysql</p>
+<h2 id="&#x5B8C;&#x6574;&#x4EE3;&#x7801;">&#x5B8C;&#x6574;&#x4EE3;&#x7801;</h2>
+<pre><code>import requests,time,pymysql
+
+# &#x8FDE;&#x63A5;&#x6570;&#x636E;&#x5E93;
+conn = pymysql.connect(host=&apos;localhost&apos;,user=&apos;root&apos;,password=&apos;root&apos;,database=&apos;zhilianzhaopin_demo&apos;,port=3306)
+# &#x8FDE;&#x63A5;&#x6570;&#x636E;&#x5E93;&#x524D;&#x51C6;&#x5907;
+cursor = conn.cursor()
+
+sql = &quot;&quot;&quot;
+ insert into zhaopindate(id,job_name,salary,welfare,workingExp,edu,emplType,createDate,company_name,company_size,company_type,company_url,position_url) values (null,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)
+&quot;&quot;&quot;
+
+zhaopBse = requests.session()
+
+
+# &#x804C;&#x4F4D;&#x540D;&#x79F0;:job_name
+# &#x85AA;&#x6C34;:salary
+# &#x798F;&#x5229;&#x5F85;&#x9047;:welfare
+# &#x5DE5;&#x4F5C;&#x5E74;&#x9650;:workingExp
+# &#x5B66;&#x5386;&#x8981;&#x6C42;&#xFF1A;edu
+# &#x5168;&#x804C;or&#x517C;&#x804C;:emplType
+# &#x53D1;&#x5E03;&#x65F6;&#x95F4;:createDate
+# &#x516C;&#x53F8;&#x540D;&#x79F0;:company_name
+# &#x516C;&#x53F8;&#x89C4;&#x6A21;:company_size
+# &#x516C;&#x53F8;&#x7C7B;&#x578B;:company_type
+# &#x516C;&#x53F8;&#x4E3B;&#x9875;:company_url
+# &#x8BE6;&#x60C5;&#x5730;&#x5740;:position_url
+
+# &#x722C;&#x53D6;&#x804C;&#x4E1A;
+work_page = [&quot;java&quot;,&quot;python&quot;,&quot;javascript&quot;,&quot;liunx&quot;,&quot;git&quot;,&quot;nodejs&quot;,&quot;hadoop&quot;,&quot;nginx&quot;,&quot;Redis&quot;,&quot;MongoDB&quot;,&quot;Storm&quot;,&quot;Spark&quot;,&quot;HBase&quot;,&quot;Flume&quot;,&quot;ZooKeeper&quot;,&quot;Kafka&quot;,&quot;hive&quot;,&quot;Bootstrap&quot;,&quot; Vue&quot;,&quot;Apache&quot;,&quot;nosql&quot;,&quot;ai&quot;,&quot;django&quot;,&quot;AJAX&quot;,&quot;p2p&quot;,&quot;Banner&quot;,&quot;MyBatis&quot;,&quot;html5&quot;,&quot;Docker&quot;,&quot;pr&quot;,&quot;ps&quot;,&quot;ae&quot;,&quot;Unity3D&quot;,&quot;Cocos&quot;]
+
+headers = {
+    &apos;Accept&apos;:&apos;application/json, text/plain, */*&apos;,
+    &apos;User-Agent&apos;:&apos;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.131 Safari/537.36&apos;,
+    &apos;Referer&apos;:&quot;https://sou.zhaopin.com/?p=2&amp;jl=489&amp;sf=0&amp;st=0&amp;kw=git&amp;kt=3&quot;,
+}
+
+# &#x5B9A;&#x4E49;id,&#x4FBF;&#x4E8E;&#x7EDF;&#x8BA1;
+bb_id = 0
+# with open(&quot;sao.json&quot;,&quot;a+&quot;,encoding=&apos;utf-8&apos;,newline=&apos;&apos;) as fp:
+for i in work_page:
+    # &#x8BF7;&#x6C42;&#x5934;
+    headers = {
+        &apos;Accept&apos;: &apos;application/json, text/plain, */*&apos;,
+        &apos;User-Agent&apos;: &apos;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.131 Safari/537.36&apos;,
+        &apos;Referer&apos;: &quot;https://sou.zhaopin.com/?p=2&amp;jl=489&amp;sf=0&amp;st=0&amp;kw=&quot;+i+&quot;&amp;kt=3&quot;,
+    }
+    # &#x722C;&#x53D6;&#x6BCF;&#x4E2A;&#x804C;&#x4E1A;1000&#x9875;&#x6570;&#x636E;
+    for j in range(1,1001):
+        # &#x9632;&#x6B62;&#x88AB;&#x5C01;&#xFF0C;&#x6BCF;&#x9875;&#x4F11;&#x7720;0.5&#x79D2;
+        time.sleep(1)
+        # start &#x722C;&#x53D6;&#x6570;&#x91CF; , PageSize&#x6BCF;&#x9875;&#x6570;&#x636E;&#x81F3;&#x591A;90/&#x9875; work_page:&#x722C;&#x53D6;&#x804C;&#x4E1A;
+        # &#x81EA;&#x52A8;&#x5207;&#x6362;
+        url = &quot;https://fe-api.zhaopin.com/c/i/sou?start=&quot; + str(j) + &quot;&amp;pageSize=90&amp;cityId=489&amp;salary=0,0&amp;workExperience=-1&amp;education=-1&amp;companyType=-1&amp;employmentType=-1&amp;jobWelfareTag=-1&amp;kw=&quot; + i + &quot;&amp;kt=3&amp;=0&amp;_v=0.13106924&amp;x-zp-page-request-id=5b19dcb044f14e268fecd1e7fe4c5607-1558011117067-262878&quot;
+        # print(url)
+        # &#x9632;&#x6B62;&#x6570;&#x636E;&#x4E0D;&#x5B58;&#x5728;&#x7A0B;&#x5E8F;&#x4E2D;&#x65AD;
+        try:
+            response_zhaopin = zhaopBse.get(headers=headers, url=url).json()
+            infor_datas = response_zhaopin[&apos;data&apos;][&apos;results&apos;]
+        except:
+            print(&quot;&#x6709;&#x70B9;&#x9519;&#x8BEF;&quot;)
+            continue
+
+        for infor_data in infor_datas:
+            # &#x804C;&#x4F4D;&#x540D;&#x79F0;
+            job_name = infor_data[&apos;jobName&apos;]
+            # &#x85AA;&#x6C34;
+            salary = infor_data[&apos;salary&apos;]
+            # &#x798F;&#x5229;&#x5F85;&#x9047;
+            welfare = &quot;&quot;.join(infor_data[&apos;welfare&apos;])
+            # &#x5DE5;&#x4F5C;&#x5E74;&#x9650;
+            workingExp = infor_data[&apos;workingExp&apos;][&apos;name&apos;]
+            # &#x5B66;&#x5386;&#x8981;&#x6C42;
+            edu = infor_data[&apos;eduLevel&apos;][&apos;name&apos;]
+            # &#x5168;&#x804C;or&#x517C;&#x804C;
+            emplType = infor_data[&apos;emplType&apos;]
+            # &#x53D1;&#x5E03;&#x65F6;&#x95F4;
+            try:
+                createDate = &quot;&quot;.join(infor_data[&apos;updateDate&apos;])
+            except:
+                createDate = &quot;&#x7F3A;&#x5C11;&#x53D1;&#x5E03;&#x65F6;&#x95F4;&quot;
+            # &#x516C;&#x53F8;&#x540D;&#x79F0;
+            company_name = infor_data[&apos;company&apos;][&apos;name&apos;]
+            # &#x516C;&#x53F8;&#x89C4;&#x6A21;
+            company_size = infor_data[&apos;company&apos;][&apos;size&apos;][&apos;name&apos;]
+            # &#x516C;&#x53F8;&#x7C7B;&#x578B;
+            company_type = infor_data[&apos;company&apos;][&apos;type&apos;][&apos;name&apos;]
+            # &#x516C;&#x53F8;&#x4E3B;&#x9875;
+            company_url = infor_data[&apos;company&apos;][&apos;url&apos;]
+            # &#x8BE6;&#x60C5;&#x5730;&#x5740;
+            position_url = infor_data[&apos;positionURL&apos;]
+            bb_id = bb_id + 1
+            data_tmp = {
+                &quot;bb_id&quot;:bb_id,
+                &quot;job_name&quot;:job_name,
+                &quot;salary&quot;:salary,
+                &quot;welfare&quot;:welfare,
+                &quot;workage&quot;:workingExp,
+                &quot;edu&quot;:edu,
+                &quot;emplType&quot;:emplType,
+                &quot;createDate&quot;:createDate,
+                &quot;company_name&quot;:company_name,
+                &quot;company_size&quot;:company_size,
+                &quot;company_type&quot;:company_type,
+                &quot;company_url&quot;:company_url,
+                &quot;position_url&quot;:position_url
+            }
+            print(job_name)
+            # &#x586B;&#x5145;&#x6570;&#x636E;
+            cursor.execute(sql,(job_name,salary,welfare,workingExp,edu,emplType,createDate,company_name,company_size,company_type,company_url,position_url))
+            # &#x63D0;&#x4EA4;sql
+            conn.commit()
+
+conn.close()
+</code></pre>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                
+                <a href="scrapy.html" class="navigation navigation-next navigation-unique" aria-label="Next page: Scrapy">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"requsts+pymysql","level":"1.3.1","depth":2,"next":{"title":"Scrapy","level":"1.3.2","depth":2,"path":"spider/scrapy.md","ref":"spider/scrapy.md","articles":[]},"previous":{"title":"数据采集","level":"1.3","depth":1,"ref":"","articles":[{"title":"requsts+pymysql","level":"1.3.1","depth":2,"path":"spider/requests+pymysql.md","ref":"spider/requests+pymysql.md","articles":[]},{"title":"Scrapy","level":"1.3.2","depth":2,"path":"spider/scrapy.md","ref":"spider/scrapy.md","articles":[]},{"title":"Flume","level":"1.3.3","depth":2,"path":"spider/flume采集本地文件到hdfs.md","ref":"spider/flume采集本地文件到hdfs.md","articles":[]},{"title":"Jsoup","level":"1.3.4","depth":2,"path":"spider/jsoup.md","ref":"spider/jsoup.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"spider/requests+pymysql.md","mtime":"2019-06-18T08:14:01.109Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-06-18T09:33:16.013Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

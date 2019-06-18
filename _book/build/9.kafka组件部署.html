@@ -1,0 +1,569 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>KAFKA搭建 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="10.storm组件部署.html" />
+    
+    
+    <link rel="prev" href="8.spark组件部署.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    前言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    平台搭建
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="jdkmysql.html">
+            
+                <a href="jdkmysql.html">
+            
+                    
+                    jdk、mysql安装、环境变量配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="1.hadoop伪分布式部署.html">
+            
+                <a href="1.hadoop伪分布式部署.html">
+            
+                    
+                    HADOOP伪分布式搭建
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="2.hadoop全分布式部署.html">
+            
+                <a href="2.hadoop全分布式部署.html">
+            
+                    
+                    HADOOP完全分布式搭建
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="3.hadoopha部署.html">
+            
+                <a href="3.hadoopha部署.html">
+            
+                    
+                    HADOOPHA搭建
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="4.hive组件部署.html">
+            
+                <a href="4.hive组件部署.html">
+            
+                    
+                    HIVE搭建
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="5.sqoop组件部署.html">
+            
+                <a href="5.sqoop组件部署.html">
+            
+                    
+                    SQOOP搭建
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="6.hbase组件部署.html">
+            
+                <a href="6.hbase组件部署.html">
+            
+                    
+                    HBASE搭建
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="7.flume组件部署.html">
+            
+                <a href="7.flume组件部署.html">
+            
+                    
+                    FLUME搭建
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.9" data-path="8.spark组件部署.html">
+            
+                <a href="8.spark组件部署.html">
+            
+                    
+                    SPARK搭建
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2.10" data-path="9.kafka组件部署.html">
+            
+                <a href="9.kafka组件部署.html">
+            
+                    
+                    KAFKA搭建
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.11" data-path="10.storm组件部署.html">
+            
+                <a href="10.storm组件部署.html">
+            
+                    
+                    STORM搭建
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.12" data-path="11.zookeeper组件部署.html">
+            
+                <a href="11.zookeeper组件部署.html">
+            
+                    
+                    ZOOKEEPER搭建
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    数据采集
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../spider/requests+pymysql.html">
+            
+                <a href="../spider/requests+pymysql.html">
+            
+                    
+                    requsts+pymysql
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../spider/scrapy.html">
+            
+                <a href="../spider/scrapy.html">
+            
+                    
+                    Scrapy
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../spider/flume采集本地文件到hdfs.html">
+            
+                <a href="../spider/flume采集本地文件到hdfs.html">
+            
+                    
+                    Flume
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../spider/jsoup.html">
+            
+                <a href="../spider/jsoup.html">
+            
+                    
+                    Jsoup
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >KAFKA搭建</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="kafka&#x5F00;&#x6E90;&#x6D41;&#x5904;&#x7406;&#x5E73;&#x53F0;&#x7684;&#x642D;&#x5EFA;">kafka&#x5F00;&#x6E90;&#x6D41;&#x5904;&#x7406;&#x5E73;&#x53F0;&#x7684;&#x642D;&#x5EFA;</h1>
+<ol>
+<li>&#x89E3;&#x538B;&#x5B89;&#x88C5;&#x5305;  <pre><code>[atguigu@hadoop102 software]$ tar -zxvf kafka_2.11-0.11.0.0.tgz -C /opt/module/
+</code></pre></li>
+<li>&#x4FEE;&#x6539;&#x89E3;&#x538B;&#x540E;&#x7684;&#x6587;&#x4EF6;&#x540D;&#x79F0;<br>```
+[atguigu@hadoop102 module]$ mv kafka_2.11-0.11.0.0/ kafka</li>
+<li>&#x5728;/opt/module/kafka&#x76EE;&#x5F55;&#x4E0B;&#x521B;&#x5EFA;logs&#x6587;&#x4EF6;&#x5939;
+[atguigu@hadoop102 kafka]$ mkdir logs
+```</li>
+<li>&#x4FEE;&#x6539;&#x914D;&#x7F6E;&#x6587;&#x4EF6;<pre><code>[atguigu@hadoop102 kafka]$ cd config/
+[atguigu@hadoop102 config]$ vi server.properties
+</code></pre>&#x8F93;&#x5165;&#x4EE5;&#x4E0B;&#x5185;&#x5BB9;&#xFF1A;<pre><code>#broker&#x7684;&#x5168;&#x5C40;&#x552F;&#x4E00;&#x7F16;&#x53F7;&#xFF0C;&#x4E0D;&#x80FD;&#x91CD;&#x590D;
+broker.id=0
+#&#x5220;&#x9664;topic&#x529F;&#x80FD;&#x4F7F;&#x80FD;
+delete.topic.enable=true
+#&#x5904;&#x7406;&#x7F51;&#x7EDC;&#x8BF7;&#x6C42;&#x7684;&#x7EBF;&#x7A0B;&#x6570;&#x91CF;
+num.network.threads=3
+#&#x7528;&#x6765;&#x5904;&#x7406;&#x78C1;&#x76D8;IO&#x7684;&#x73B0;&#x6210;&#x6570;&#x91CF;
+num.io.threads=8
+#&#x53D1;&#x9001;&#x5957;&#x63A5;&#x5B57;&#x7684;&#x7F13;&#x51B2;&#x533A;&#x5927;&#x5C0F;
+socket.send.buffer.bytes=102400
+#&#x63A5;&#x6536;&#x5957;&#x63A5;&#x5B57;&#x7684;&#x7F13;&#x51B2;&#x533A;&#x5927;&#x5C0F;
+socket.receive.buffer.bytes=102400
+#&#x8BF7;&#x6C42;&#x5957;&#x63A5;&#x5B57;&#x7684;&#x7F13;&#x51B2;&#x533A;&#x5927;&#x5C0F;
+socket.request.max.bytes=104857600
+#kafka&#x8FD0;&#x884C;&#x65E5;&#x5FD7;&#x5B58;&#x653E;&#x7684;&#x8DEF;&#x5F84;    
+log.dirs=/opt/module/kafka/logs
+#topic&#x5728;&#x5F53;&#x524D;broker&#x4E0A;&#x7684;&#x5206;&#x533A;&#x4E2A;&#x6570;
+num.partitions=1
+#&#x7528;&#x6765;&#x6062;&#x590D;&#x548C;&#x6E05;&#x7406;data&#x4E0B;&#x6570;&#x636E;&#x7684;&#x7EBF;&#x7A0B;&#x6570;&#x91CF;
+num.recovery.threads.per.data.dir=1
+#segment&#x6587;&#x4EF6;&#x4FDD;&#x7559;&#x7684;&#x6700;&#x957F;&#x65F6;&#x95F4;&#xFF0C;&#x8D85;&#x65F6;&#x5C06;&#x88AB;&#x5220;&#x9664;
+log.retention.hours=168
+#&#x914D;&#x7F6E;&#x8FDE;&#x63A5;Zookeeper&#x96C6;&#x7FA4;&#x5730;&#x5740;
+zookeeper.connect=hadoop102:2181,hadoop103:2181,hadoop104:2181
+</code></pre></li>
+<li>&#x914D;&#x7F6E;&#x73AF;&#x5883;&#x53D8;&#x91CF;
+```
+[atguigu@hadoop102 module]$ sudo vi /etc/profile</li>
+</ol>
+<h1 id="kafkahome">KAFKA_HOME</h1>
+<p>export KAFKA_HOME=/opt/module/kafka
+export PATH=$PATH:$KAFKA_HOME/bin</p>
+<p>[atguigu@hadoop102 module]$ source /etc/profile</p>
+<pre><code>6. &#x5206;&#x53D1;&#x5B89;&#x88C5;&#x5305;
+</code></pre><p>[atguigu@hadoop102 module]$ xsync kafka/
+&#x6CE8;&#x610F;&#xFF1A;&#x5206;&#x53D1;&#x4E4B;&#x540E;&#x8BB0;&#x5F97;&#x914D;&#x7F6E;&#x5176;&#x4ED6;&#x673A;&#x5668;&#x7684;&#x73AF;&#x5883;&#x53D8;&#x91CF;</p>
+<pre><code>7. &#x5206;&#x522B;&#x5728;hadoop103&#x548C;hadoop104&#x4E0A;&#x4FEE;&#x6539;&#x914D;&#x7F6E;&#x6587;&#x4EF6;/opt/module/kafka/config/
+</code></pre><p>server.properties&#x4E2D;&#x7684;broker.id=1&#x3001;broker.id=2
+    &#x6CE8;&#xFF1A;broker.id&#x4E0D;&#x5F97;&#x91CD;&#x590D;</p>
+<pre><code>8. &#x542F;&#x52A8;&#x96C6;&#x7FA4;  
+&#x4F9D;&#x6B21;&#x5728;hadoop102&#x3001;hadoop103&#x3001;hadoop104&#x8282;&#x70B9;&#x4E0A;&#x542F;&#x52A8;kafka
+</code></pre><p>[atguigu@hadoop102 kafka]$ bin/kafka-server-start.sh config/server.properties &amp;
+[atguigu@hadoop103 kafka]$ bin/kafka-server-start.sh config/server.properties &amp;
+[atguigu@hadoop104 kafka]$ bin/kafka-server-start.sh config/server.properties &amp;</p>
+<pre><code>9. &#x5173;&#x95ED;&#x96C6;&#x7FA4;
+</code></pre><p>[atguigu@hadoop102 kafka]$ bin/kafka-server-stop.sh stop
+[atguigu@hadoop103 kafka]$ bin/kafka-server-stop.sh stop
+[atguigu@hadoop104 kafka]$ bin/kafka-server-stop.sh stop</p>
+<pre><code>
+# 2.3 Kafka&#x547D;&#x4EE4;&#x884C;&#x64CD;&#x4F5C;
+
+1. &#x67E5;&#x770B;&#x5F53;&#x524D;&#x670D;&#x52A1;&#x5668;&#x4E2D;&#x7684;&#x6240;&#x6709;topic
+</code></pre><p>[atguigu@hadoop102 kafka]$ bin/kafka-topics.sh --zookeeper hadoop102:2181 --list</p>
+<pre><code>2. &#x521B;&#x5EFA;topic
+</code></pre><p>[atguigu@hadoop102 kafka]$ bin/kafka-topics.sh --zookeeper hadoop102:2181 \
+--create --replication-factor 3 --partitions 1 --topic first
+&#x9009;&#x9879;&#x8BF4;&#x660E;&#xFF1A;
+--topic &#x5B9A;&#x4E49;topic&#x540D;
+--replication-factor  &#x5B9A;&#x4E49;&#x526F;&#x672C;&#x6570;
+--partitions  &#x5B9A;&#x4E49;&#x5206;&#x533A;&#x6570;</p>
+<pre><code>3. &#x5220;&#x9664;topic
+</code></pre><p>[atguigu@hadoop102 kafka]$ bin/kafka-topics.sh --zookeeper hadoop102:2181 \
+--delete --topic first</p>
+<pre><code>&#x9700;&#x8981;server.properties&#x4E2D;&#x8BBE;&#x7F6E;delete.topic.enable=true&#x5426;&#x5219;&#x53EA;&#x662F;&#x6807;&#x8BB0;&#x5220;&#x9664;&#x6216;&#x8005;&#x76F4;&#x63A5;&#x91CD;&#x542F;&#x3002;  
+4. &#x53D1;&#x9001;&#x6D88;&#x606F;
+</code></pre><p>[atguigu@hadoop102 kafka]$ bin/kafka-console-producer.sh \
+--broker-list hadoop102:9092 --topic first</p>
+<blockquote>
+<p>hello world
+atguigu  atguigu</p>
+<pre><code>5. &#x6D88;&#x8D39;&#x6D88;&#x606F;
+</code></pre><p>[atguigu@hadoop103 kafka]$ bin/kafka-console-consumer.sh \
+--zookeeper hadoop102:2181 --from-beginning --topic first
+--from-beginning&#xFF1A;&#x4F1A;&#x628A;first&#x4E3B;&#x9898;&#x4E2D;&#x4EE5;&#x5F80;&#x6240;&#x6709;&#x7684;&#x6570;&#x636E;&#x90FD;&#x8BFB;&#x53D6;&#x51FA;&#x6765;&#x3002;&#x6839;&#x636E;&#x4E1A;&#x52A1;&#x573A;&#x666F;&#x9009;&#x62E9;&#x662F;&#x5426;&#x589E;&#x52A0;&#x8BE5;&#x914D;&#x7F6E;&#x3002;</p>
+<pre><code>6. &#x67E5;&#x770B;&#x67D0;&#x4E2A;Topic&#x7684;&#x8BE6;&#x60C5;
+</code></pre><p>[atguigu@hadoop102 kafka]$ bin/kafka-topics.sh --zookeeper hadoop102:2181 \
+--describe --topic first
+```</p>
+</blockquote>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="8.spark组件部署.html" class="navigation navigation-prev " aria-label="Previous page: SPARK搭建">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="10.storm组件部署.html" class="navigation navigation-next " aria-label="Next page: STORM搭建">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"KAFKA搭建","level":"1.2.10","depth":2,"next":{"title":"STORM搭建","level":"1.2.11","depth":2,"path":"build/10.storm组件部署.md","ref":"build/10.storm组件部署.md","articles":[]},"previous":{"title":"SPARK搭建","level":"1.2.9","depth":2,"path":"build/8.spark组件部署.md","ref":"build/8.spark组件部署.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"build/9.kafka组件部署.md","mtime":"2019-06-18T06:13:38.820Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-06-18T09:33:16.013Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

@@ -1,0 +1,545 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>HADOOP完全分布式搭建 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="3.hadoopha部署.html" />
+    
+    
+    <link rel="prev" href="1.hadoop伪分布式部署.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    前言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    平台搭建
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="jdkmysql.html">
+            
+                <a href="jdkmysql.html">
+            
+                    
+                    jdk、mysql安装、环境变量配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="1.hadoop伪分布式部署.html">
+            
+                <a href="1.hadoop伪分布式部署.html">
+            
+                    
+                    HADOOP伪分布式搭建
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2.3" data-path="2.hadoop全分布式部署.html">
+            
+                <a href="2.hadoop全分布式部署.html">
+            
+                    
+                    HADOOP完全分布式搭建
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="3.hadoopha部署.html">
+            
+                <a href="3.hadoopha部署.html">
+            
+                    
+                    HADOOPHA搭建
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="4.hive组件部署.html">
+            
+                <a href="4.hive组件部署.html">
+            
+                    
+                    HIVE搭建
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="5.sqoop组件部署.html">
+            
+                <a href="5.sqoop组件部署.html">
+            
+                    
+                    SQOOP搭建
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="6.hbase组件部署.html">
+            
+                <a href="6.hbase组件部署.html">
+            
+                    
+                    HBASE搭建
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="7.flume组件部署.html">
+            
+                <a href="7.flume组件部署.html">
+            
+                    
+                    FLUME搭建
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.9" data-path="8.spark组件部署.html">
+            
+                <a href="8.spark组件部署.html">
+            
+                    
+                    SPARK搭建
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.10" data-path="9.kafka组件部署.html">
+            
+                <a href="9.kafka组件部署.html">
+            
+                    
+                    KAFKA搭建
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.11" data-path="10.storm组件部署.html">
+            
+                <a href="10.storm组件部署.html">
+            
+                    
+                    STORM搭建
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.12" data-path="11.zookeeper组件部署.html">
+            
+                <a href="11.zookeeper组件部署.html">
+            
+                    
+                    ZOOKEEPER搭建
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    数据采集
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../spider/requests+pymysql.html">
+            
+                <a href="../spider/requests+pymysql.html">
+            
+                    
+                    requsts+pymysql
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../spider/scrapy.html">
+            
+                <a href="../spider/scrapy.html">
+            
+                    
+                    Scrapy
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../spider/flume采集本地文件到hdfs.html">
+            
+                <a href="../spider/flume采集本地文件到hdfs.html">
+            
+                    
+                    Flume
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../spider/jsoup.html">
+            
+                <a href="../spider/jsoup.html">
+            
+                    
+                    Jsoup
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >HADOOP完全分布式搭建</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="hadoop&#x5168;&#x5206;&#x5E03;&#x5F0F;&#x90E8;&#x7F72;md">hadoop&#x5168;&#x5206;&#x5E03;&#x5F0F;&#x90E8;&#x7F72;.md</h1>
+<blockquote>
+<p>&#x914D;&#x7F6E;&#x514D;&#x5BC6;&#x767B;&#x9646;</p>
+<ol>
+<li>&#x914D;&#x7F6E;<code>/etc/hosts</code>&#x6587;&#x4EF6;<pre><code>192.168.188.4 master
+192.168.188.3 slave1
+192.168.188.5 slave2
+</code></pre></li>
+</ol>
+</blockquote>
+<h1 id="&#x96C6;&#x7FA4;&#x89C4;&#x5212;">&#x96C6;&#x7FA4;&#x89C4;&#x5212;</h1>
+<table>
+<thead>
+<tr>
+<th>ip&#x5730;&#x5740;</th>
+<th>&#x4E3B;&#x673A;&#x540D;</th>
+<th>&#x5B89;&#x88C5;&#x8F6F;&#x4EF6;</th>
+<th>&#x8FDB;&#x7A0B;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>192.168.188.4</td>
+<td>master</td>
+<td>hadoopjdk</td>
+<td>NameNode&#x3001; ResourceManager</td>
+</tr>
+<tr>
+<td>192.168.188.3</td>
+<td>slave1</td>
+<td>hadoopjdk</td>
+<td>NameNode</td>
+</tr>
+<tr>
+<td>192.168.188.5</td>
+<td>slave2</td>
+<td>hadoopjdk</td>
+<td>DataNode</td>
+</tr>
+</tbody>
+</table>
+<h2 id="&#x6210;&#x529F;&#x622A;&#x56FE;">&#x6210;&#x529F;&#x622A;&#x56FE;</h2>
+<p><img src="http://tmp.mada8.com/201906142230_455.png" alt=""></p>
+<ol>
+<li>&#x64CD;&#x4F5C;&#x6307;&#x4EE4;
+```
+ssh localhost</li>
+</ol>
+<p>ssh-keygen -t rsa</p>
+<p>cat ~/.ssh/id_rsa.pub &gt; ~/.ssh/authorized_keys</p>
+<pre><code>
+## &#x6210;&#x529F;&#x622A;&#x56FE;
+![](http://tmp.mada8.com/201906142256_119.png)
+
+3. &#x7528;`scp`&#x6307;&#x4EE4;&#x5C06;&#x6240;&#x6709;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x590D;&#x5236;&#x5230;&#x5B50;&#x8282;&#x70B9;
+</code></pre><p>scp ~/.ssh/authorized_keys root@slave2:~/.ssh/</p>
+<p>&#x683C;&#x5F0F;: scp &#x590D;&#x5236;&#x6587;&#x4EF6; [&#x7528;&#x6237;&#x540D;]@[&#x8282;&#x70B9;&#x540D;]:&#x590D;&#x5236;&#x540E;&#x8DEF;&#x5F84;/&#x6587;&#x4EF6;
+      scp file username@ip:filepath</p>
+<p>&#x6269;&#x5C55;&#xFF1A;
+    &#x62F7;&#x8D1D;&#x6587;&#x4EF6;&#x5939; &#x9700;&#x8981;&#x6DFB;&#x52A0; -r
+    scp -r /usr/local/hadoop root@slave1:/usr/local/
+    &#x6216; &#x5C06;&#x6587;&#x4EF6;&#x5939;&#x6253;&#x5305;
+    tar -zcf xxx xxx.tar.gz</p>
+<p>```</p>
+<h2 id="&#x6210;&#x529F;&#x622A;&#x56FE;">&#x6210;&#x529F;&#x622A;&#x56FE;</h2>
+<p><img src="http://tmp.mada8.com/201906142305_853.png" alt=""></p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="1.hadoop伪分布式部署.html" class="navigation navigation-prev " aria-label="Previous page: HADOOP伪分布式搭建">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="3.hadoopha部署.html" class="navigation navigation-next " aria-label="Next page: HADOOPHA搭建">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"HADOOP完全分布式搭建","level":"1.2.3","depth":2,"next":{"title":"HADOOPHA搭建","level":"1.2.4","depth":2,"path":"build/3.hadoopha部署.md","ref":"build/3.hadoopha部署.md","articles":[]},"previous":{"title":"HADOOP伪分布式搭建","level":"1.2.2","depth":2,"path":"build/1.hadoop伪分布式部署.md","ref":"build/1.hadoop伪分布式部署.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"build/2.hadoop全分布式部署.md","mtime":"2019-06-18T06:13:38.808Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-06-18T09:33:16.013Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
