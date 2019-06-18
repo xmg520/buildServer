@@ -2,7 +2,7 @@
 
 * [前言](README.md)
 * [平台搭建]()
-    * [jdk、mysql安装、环境变量配置](build\0.jdk安装+mysql+环境变量配置(所有组件通用).md)
+    * [jdk、mysql安装、环境变量配置](build\jdkmysql.md)
     * [HADOOP伪分布式搭建](build\1.hadoop伪分布式部署.md)
     * [HADOOP完全分布式搭建](build\2.hadoop全分布式部署.md)
     * [HADOOPHA搭建](build\3.hadoopha部署.md)
