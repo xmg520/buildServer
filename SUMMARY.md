@@ -5,6 +5,7 @@
     * [jdk、mysql安装、环境变量配置](build\jdkmysql.md)
     * [HADOOP伪分布式搭建](build\1.hadoop伪分布式部署.md)
     * [HADOOP完全分布式搭建](build\2.hadoop全分布式部署.md)
+    * [hadoopHa介绍](build\hadoopha.md)
     * [HADOOPHA搭建](build\3.hadoopha部署.md)
     * [HIVE搭建](build\4.hive组件部署.md)
     * [SQOOP搭建](build\5.sqoop组件部署.md)
@@ -14,6 +15,7 @@
     * [KAFKA搭建](build\9.kafka组件部署.md)
     * [STORM搭建](build\10.storm组件部署.md)
     * [ZOOKEEPER搭建](build\11.zookeeper组件部署.md)
+    
 * [数据采集]()
     * [requsts+pymysql](spider\requests+pymysql.md)
     * [Scrapy](spider\scrapy.md)
