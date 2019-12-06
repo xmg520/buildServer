@@ -416,7 +416,7 @@
 PATH=$PATH:$JAVA_HOME/bin:$HADOOP_HOME/bin:$HIVE_HOME/bin:$HBASE_HOME/bin:$SQOOP_HOME/bin
 </code></pre><p>&#x7528;<code>source</code>&#x5237;&#x65B0;&#x73AF;&#x5883;&#x53D8;&#x91CF;</p>
 </li>
-<li><p>&#x4FEE;&#x6539;&#x914D;&#x7F6E;&#x6587;&#x4EF6;<br> 2.1 &#x8FDB;&#x5165;sqoop&#x7684;conf&#x76EE;&#x5F55;&#xFF0C;&#x8F93;&#x5165; cp sqoop-env-template.sh sqoop-env.sh &#x590D;&#x5236;&#x5E76;&#x91CD;&#x547D;&#x540D;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#xFF0C;&#x63A5;&#x7740;&#x8F93;&#x5165; vi sqoop-env.sh &#x4FEE;&#x6539;&#x914D;&#x7F6E;&#x6587;&#x4EF6;</p>
+<li><p>&#x4FEE;&#x6539;&#x914D;&#x7F6E;&#x6587;&#x4EF6;<br> 2.1 &#x8FDB;&#x5165;sqoop&#x7684;conf&#x76EE;&#x5F55;&#xFF0C;&#x8F93;&#x5165; cp sqoop-env-template.sh sqoop-env.sh &#x590D;&#x5236;&#x5E76;&#x91CD;&#x547D;&#x540D;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#xFF0C;&#x63A5;&#x7740;&#x8F93;&#x5165; <code>vi sqoop-env.sh</code> &#x4FEE;&#x6539;&#x914D;&#x7F6E;&#x6587;&#x4EF6;</p>
 <pre><code> export HADOOP_COMMON_HOME=/usr/local/hadoop/hadoop-2.7.3/
 
  export HADOOP_MAPRED_HOME=/usr/local/hadoop/hadoop-2.7.3/
@@ -512,7 +512,7 @@ hbase(main):002:0&gt;
 --hbase-table new_help_keyword \
 --column-family person \
 --hbase-row-key help_keyword_id
-</code></pre><p><a href="https://blog.csdn.net/lijingshan34/article/details/81316118" target="_blank">&#x6269;&#x5C55;&#x5B66;&#x4E60;</a></p>
+</code></pre><h3 id="sqoop&#x64CD;&#x4F5C;&#x7EC3;&#x4E60;&#x6269;&#x5C55;&#x5B66;&#x4E60;"><a href="https://blog.csdn.net/lijingshan34/article/details/81316118" target="_blank">sqoop&#x64CD;&#x4F5C;&#x7EC3;&#x4E60;&#x6269;&#x5C55;&#x5B66;&#x4E60;</a></h3>
 
                                 
                                 </section>
@@ -556,7 +556,7 @@ hbase(main):002:0&gt;
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"SQOOP搭建","level":"1.2.7","depth":2,"next":{"title":"HBASE搭建","level":"1.2.8","depth":2,"path":"build/6.hbase组件部署.md","ref":"build/6.hbase组件部署.md","articles":[]},"previous":{"title":"HIVE搭建","level":"1.2.6","depth":2,"path":"build/4.hive组件部署.md","ref":"build/4.hive组件部署.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"build/5.sqoop组件部署.md","mtime":"2019-12-06T00:49:00.741Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-12-06T01:02:11.024Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"SQOOP搭建","level":"1.2.7","depth":2,"next":{"title":"HBASE搭建","level":"1.2.8","depth":2,"path":"build/6.hbase组件部署.md","ref":"build/6.hbase组件部署.md","articles":[]},"previous":{"title":"HIVE搭建","level":"1.2.6","depth":2,"path":"build/4.hive组件部署.md","ref":"build/4.hive组件部署.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"build/5.sqoop组件部署.md","mtime":"2019-12-06T01:36:48.699Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-12-06T01:48:49.248Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

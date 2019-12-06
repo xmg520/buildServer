@@ -406,14 +406,13 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="hadoop&#x9AD8;&#x53EF;&#x7528;&#x73AF;&#x5883;&#x90E8;&#x7F72;">hadoop&#x9AD8;&#x53EF;&#x7528;&#x73AF;&#x5883;&#x90E8;&#x7F72;</h1>
-<h1 id="hadoopha&#x90E8;&#x7F72;">HADOOPHA&#x90E8;&#x7F72;</h1>
+                                <h1 id="hadoop&#x9AD8;&#x53EF;&#x7528;&#xFF08;hadoopha&#xFF09;&#x73AF;&#x5883;&#x90E8;&#x7F72;">Hadoop&#x9AD8;&#x53EF;&#x7528;&#xFF08;HadoopHA&#xFF09;&#x73AF;&#x5883;&#x90E8;&#x7F72;</h1>
 <p><a href="hadoopha.html">HADOOPHA(&#x9AD8;&#x53EF;&#x7528;)&#x4ECB;&#x7ECD;</a></p>
 <blockquote>
 <p>&#x524D;&#x63D0; <strong> &#x53CD;&#x590D;&#x642D;&#x5EFA; hadoop &#x5B8C;&#x5168;&#x5206;&#x5E03;&#x5F0F; </strong> &#x719F;&#x7EC3;&#x914D;&#x7F6E;&#x6587;&#x4EF6;</p>
+</blockquote>
 <h1 id="hadoopha&#x96C6;&#x7FA4;&#x642D;&#x5EFA;">HadoopHA&#x96C6;&#x7FA4;&#x642D;&#x5EFA;</h1>
 <p>&#x73AF;&#x5883;&#x8BF4;&#x660E;&#xFF1A;</p>
-</blockquote>
 <p>&#x7CFB;&#x7EDF;&#xFF1A;centos7-x &#x8F6F;&#x4EF6;&#xFF1A;hadoop2.6.0&#x3001;JDK8</p>
 <h2 id="&#x96C6;&#x7FA4;&#x89C4;&#x5212;">&#x96C6;&#x7FA4;&#x89C4;&#x5212;</h2>
 <table>
@@ -614,8 +613,7 @@
 <h3 id="hadoop-master">hadoop-master:</h3>
 <p> ./sbin/hadoop-daemon.sh start namenode</p>
 <h3 id="hadoop-back">hadoop-back:</h3>
-<p>./bin/hdfs namenode -bootstrapStandby
-./sbin/hadoop-daemon.sh start namenode  </p>
+<p>./bin/hdfs namenode -bootstrapStandby<br>./sbin/hadoop-daemon.sh start namenode  </p>
 <p>&#x6B64;&#x65F6;namenode1(hadoop-master)&#x548C;namenode2(hadoop-back)&#x540C;&#x65F6;&#x5904;&#x4E8E;standby&#x72B6;&#x6001;&#x3002;  </p>
 <p>$hdfs haadmin -getServiceState nn1 (&#x67E5;&#x770B;hadoop-master&#x7684;namenode&#x72B6;&#x6001;)<br>$hdfs haadmin -getServiceState nn2(&#x67E5;&#x770B;hadoop-master2&#x7684;namenode&#x72B6;&#x6001;)</p>
 <h1 id="7&#x3001;&#x542F;&#x52A8;zkfc&#x670D;&#x52A1;">7&#x3001;&#x542F;&#x52A8;zkfc&#x670D;&#x52A1;</h1>
@@ -628,25 +626,30 @@
 <hr>
 <h1 id="&#x52A8;&#x6001;&#x6DFB;&#x52A0;&#x8282;&#x70B9;">&#x52A8;&#x6001;&#x6DFB;&#x52A0;&#x8282;&#x70B9;</h1>
 <h2 id="&#x4FEE;&#x6539;&#x914D;&#x7F6E;&#x6587;&#x4EF6;">&#x4FEE;&#x6539;&#x914D;&#x7F6E;&#x6587;&#x4EF6;</h2>
-<h3 id="1-&#x914D;&#x7F6E;slaves3x&#x7684;hadoop&#x662F;workers&#x6587;&#x4EF6;">1. &#x914D;&#x7F6E;slaves(3.X&#x7684;Hadoop&#x662F;workers)&#x6587;&#x4EF6;</h3>
-<p>&#x6DFB;&#x52A0;&#x8981;&#x589E;&#x52A0;&#x7684;&#x673A;&#x5668;&#x540D;&#x79F0;&#xFF08;&#x672C;&#x4F8B;&#x4F7F;&#x7528;hadoop-slave4&#xFF09;</p>
+<ol>
+<li><p>&#x914D;&#x7F6E;slaves(3.X&#x7684;Hadoop&#x662F;workers)&#x6587;&#x4EF6;
+&#x6DFB;&#x52A0;&#x8981;&#x589E;&#x52A0;&#x7684;&#x673A;&#x5668;&#x540D;&#x79F0;&#xFF08;&#x672C;&#x4F8B;&#x4F7F;&#x7528;hadoop-slave4&#xFF09;</p>
 <pre><code>hadoop-back
 hadoop-slave2
 hadoop-slave3
 hadoop-slave4
-</code></pre><ol>
-<li>hosts&#x6587;&#x4EF6;
-&#x5728;&#x96C6;&#x7FA4;&#x4E2D;&#x6BCF;&#x53F0;&#x673A;&#x5668;&#x52A0;&#x5165;&#x65B0;&#x673A;&#x5668;&#x7684;ip&#x4E0E;&#x673A;&#x5668;&#x540D;&#x6620;&#x5C04;&#x3002;<pre><code>192.168.20.101  hadoop-master
+</code></pre></li>
+<li><p>hosts&#x6587;&#x4EF6;
+&#x5728;&#x96C6;&#x7FA4;&#x4E2D;&#x6BCF;&#x53F0;&#x673A;&#x5668;&#x52A0;&#x5165;&#x65B0;&#x673A;&#x5668;&#x7684;ip&#x4E0E;&#x673A;&#x5668;&#x540D;&#x6620;&#x5C04;&#x3002;</p>
+<pre><code>192.168.20.101  hadoop-master
 192.168.20.102  hadoop-back
 192.168.20.103  hadoop-slave2
 192.168.20.104  hadoop-slave3
 192.168.20.105  hadoop-slave4
-</code></pre>&#x542F;&#x52A8;DataNode<pre><code>hadoop-daemon.sh start datanode
+</code></pre></li>
+<li>&#x542F;&#x52A8;DataNode<pre><code>hadoop-daemon.sh start datanode
 yarn-daemon.sh start nodemanager
-</code></pre>&#x68C0;&#x67E5;&#x65B0;&#x589E;&#x8282;&#x70B9;&#x662F;&#x5426;&#x5DF2;&#x7ECF;Live
-&#x901A;&#x8FC7;&#x547D;&#x4EE4;&#x53EF;&#x4EE5;&#x67E5;&#x770B;&#x5DF2;&#x7ECF;&#x542F;&#x52A8;&#x7684;&#x8282;&#x70B9;&#xFF1A;<pre><code>yarn node -list
-</code></pre>&#x4E5F;&#x53EF;&#x901A;&#x8FC7;&#x56FE;&#x5F62;&#x5316;&#x754C;&#x9762;&#x67E5;&#x770B;:<pre><code>http://ipaddr:50070
-</code></pre>2.X&#x7AEF;&#x53E3;&#x53F7;&#x4E3A;50070,3.X&#x7AEF;&#x53E3;&#x53F7;&#x4E3A;9870.</li>
+</code></pre></li>
+<li>&#x68C0;&#x67E5;&#x65B0;&#x589E;&#x8282;&#x70B9;&#x662F;&#x5426;&#x5DF2;&#x7ECF;Live&#xFF0C;&#x901A;&#x8FC7;&#x547D;&#x4EE4;&#x53EF;&#x4EE5;&#x67E5;&#x770B;&#x5DF2;&#x7ECF;&#x542F;&#x52A8;&#x7684;&#x8282;&#x70B9;&#xFF1A;<pre><code>yarn node -list
+</code></pre></li>
+<li>&#x4E5F;&#x53EF;&#x901A;&#x8FC7;&#x56FE;&#x5F62;&#x5316;&#x754C;&#x9762;&#x67E5;&#x770B;:<pre><code># 2.X&#x7AEF;&#x53E3;&#x53F7;&#x4E3A;50070,3.X&#x7AEF;&#x53E3;&#x53F7;&#x4E3A;9870.
+http://ipaddr:50070
+</code></pre></li>
 </ol>
 <h1 id="&#x6D4B;&#x8BD5;&#x521B;&#x5EFA;&#x6587;&#x4EF6;">&#x6D4B;&#x8BD5;&#x521B;&#x5EFA;&#x6587;&#x4EF6;</h1>
 <p>&#x6D4B;&#x8BD5;&#x4E00;&#x4E0B;&#x521B;&#x5EFA;&#x65B0;&#x7684;&#x6587;&#x4EF6;&#x65F6;&#x662F;&#x5426;&#x80FD;&#x96C6;&#x6210;&#x65B0;&#x7684;&#x5907;&#x4EFD;&#x7CFB;&#x6570;</p>
@@ -717,7 +720,7 @@ hdfs hadoop fs -lsr /test
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"HADOOPHA搭建","level":"1.2.5","depth":2,"next":{"title":"HIVE搭建","level":"1.2.6","depth":2,"path":"build/4.hive组件部署.md","ref":"build/4.hive组件部署.md","articles":[]},"previous":{"title":"hadoopHa介绍","level":"1.2.4","depth":2,"path":"build/hadoopha.md","ref":"build/hadoopha.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"build/3.hadoopha部署.md","mtime":"2019-06-24T03:10:20.534Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-12-06T01:02:11.024Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"HADOOPHA搭建","level":"1.2.5","depth":2,"next":{"title":"HIVE搭建","level":"1.2.6","depth":2,"path":"build/4.hive组件部署.md","ref":"build/4.hive组件部署.md","articles":[]},"previous":{"title":"hadoopHa介绍","level":"1.2.4","depth":2,"path":"build/hadoopha.md","ref":"build/hadoopha.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"build/3.hadoopha部署.md","mtime":"2019-12-06T01:33:41.309Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-12-06T01:48:49.248Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

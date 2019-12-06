@@ -408,20 +408,14 @@
                                 
                                 <h1 id="flume&#x5206;&#x5E03;&#x5F0F;&#x65E5;&#x5FD7;&#x91C7;&#x96C6;&#x3001;&#x805A;&#x5408;&#x548C;&#x4F20;&#x8F93;&#x5E73;&#x53F0;&#x7684;&#x642D;&#x5EFA;">Flume&#x5206;&#x5E03;&#x5F0F;&#x65E5;&#x5FD7;&#x91C7;&#x96C6;&#x3001;&#x805A;&#x5408;&#x548C;&#x4F20;&#x8F93;&#x5E73;&#x53F0;&#x7684;&#x642D;&#x5EFA;</h1>
 <h1 id="&#x642D;&#x5EFA;&#xFF1A;">&#x642D;&#x5EFA;&#xFF1A;</h1>
-<ol>
-<li>&#x89E3;&#x538B;</li>
-</ol>
-<pre><code>
-tar -zxf apache-flume-1.7.0-bin.tar.gz -C /usr/local
-
+<p>1.&#x89E3;&#x538B;  </p>
+<pre><code>tar -zxf apache-flume-1.7.0-bin.tar.gz -C /usr/local
 mv /usr/local/apache-flume-xxxx  -C /usr/local/flume
-</code></pre><ol>
-<li>&#x5C06; flume/conf &#x4E0B;&#x7684; flume-env.sh.template &#x6587;&#x4EF6;&#x4FEE;&#x6539;&#x4E3A; flume-env.sh&#xFF0C;&#x5E76;&#x914D;&#x7F6E; flume.env.sh &#x6587;&#x4EF6;<pre><code>[wbt@hadoop102 conf]$ mv flume-env.sh.template flume-env.sh
+</code></pre><p>2.&#x5C06; flume/conf &#x4E0B;&#x7684; <code>flume-env.sh.template</code> &#x6587;&#x4EF6;&#x4FEE;&#x6539;&#x4E3A; <code>flume-env.sh</code>&#xFF0C;&#x5E76;&#x914D;&#x7F6E; <code>flume.env.sh</code> &#x6587;&#x4EF6;  </p>
+<pre><code>[wbt@hadoop102 conf]$ mv flume-env.sh.template flume-env.sh
 [wbt@hadoop102 conf]$ vi flume-env.sh
 export JAVA_HOME=/usr/local/jdk1.8.0_144
-</code></pre></li>
-</ol>
-
+</code></pre>
                                 
                                 </section>
                             
@@ -464,7 +458,7 @@ export JAVA_HOME=/usr/local/jdk1.8.0_144
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"FLUME搭建","level":"1.2.9","depth":2,"next":{"title":"SPARK搭建","level":"1.2.10","depth":2,"path":"build/8.spark组件部署.md","ref":"build/8.spark组件部署.md","articles":[]},"previous":{"title":"HBASE搭建","level":"1.2.8","depth":2,"path":"build/6.hbase组件部署.md","ref":"build/6.hbase组件部署.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"build/7.flume组件部署.md","mtime":"2019-12-05T13:36:37.181Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-12-06T01:02:11.024Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"FLUME搭建","level":"1.2.9","depth":2,"next":{"title":"SPARK搭建","level":"1.2.10","depth":2,"path":"build/8.spark组件部署.md","ref":"build/8.spark组件部署.md","articles":[]},"previous":{"title":"HBASE搭建","level":"1.2.8","depth":2,"path":"build/6.hbase组件部署.md","ref":"build/6.hbase组件部署.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"build/7.flume组件部署.md","mtime":"2019-12-06T01:47:33.772Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-12-06T01:48:49.248Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

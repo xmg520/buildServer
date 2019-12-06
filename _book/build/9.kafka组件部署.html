@@ -410,11 +410,10 @@
 <ol>
 <li>&#x89E3;&#x538B;&#x5B89;&#x88C5;&#x5305;  <pre><code>[wbt@hadoop102 software]$ tar -zxvf kafka_2.11-0.11.0.0.tgz -C /opt/module/
 </code></pre></li>
-<li>&#x4FEE;&#x6539;&#x89E3;&#x538B;&#x540E;&#x7684;&#x6587;&#x4EF6;&#x540D;&#x79F0;<br>```
-[wbt@hadoop102 module]$ mv kafka_2.11-0.11.0.0/ kafka</li>
-<li>&#x5728;/opt/module/kafka&#x76EE;&#x5F55;&#x4E0B;&#x521B;&#x5EFA;logs&#x6587;&#x4EF6;&#x5939;
-[wbt@hadoop102 kafka]$ mkdir logs
-```</li>
+<li>&#x4FEE;&#x6539;&#x89E3;&#x538B;&#x540E;&#x7684;&#x6587;&#x4EF6;&#x540D;&#x79F0;  <pre><code>[wbt@hadoop102 module]$ mv kafka_2.11-0.11.0.0/ kafka
+</code></pre></li>
+<li>&#x5728;/opt/module/kafka&#x76EE;&#x5F55;&#x4E0B;&#x521B;&#x5EFA;logs&#x6587;&#x4EF6;&#x5939;<pre><code>[wbt@hadoop102 kafka]$ mkdir logs
+</code></pre></li>
 <li>&#x4FEE;&#x6539;&#x914D;&#x7F6E;&#x6587;&#x4EF6;<pre><code>[wbt@hadoop102 kafka]$ cd config/
 [wbt@hadoop102 config]$ vi server.properties
 </code></pre>&#x8F93;&#x5165;&#x4EE5;&#x4E0B;&#x5185;&#x5BB9;&#xFF1A;<pre><code>#broker&#x7684;&#x5168;&#x5C40;&#x552F;&#x4E00;&#x7F16;&#x53F7;&#xFF0C;&#x4E0D;&#x80FD;&#x91CD;&#x590D;
@@ -442,60 +441,54 @@ log.retention.hours=168
 #&#x914D;&#x7F6E;&#x8FDE;&#x63A5;Zookeeper&#x96C6;&#x7FA4;&#x5730;&#x5740;
 zookeeper.connect=hadoop102:2181,hadoop103:2181,hadoop104:2181
 </code></pre></li>
-<li>&#x914D;&#x7F6E;&#x73AF;&#x5883;&#x53D8;&#x91CF;
-```
-[wbt@hadoop102 module]$ sudo vi /etc/profile</li>
-</ol>
-<h1 id="kafkahome">KAFKA_HOME</h1>
-<p>export KAFKA_HOME=/opt/module/kafka
-export PATH=$PATH:$KAFKA_HOME/bin</p>
-<p>[wbt@hadoop102 module]$ source /etc/profile</p>
-<pre><code>6. &#x5206;&#x53D1;&#x5B89;&#x88C5;&#x5305;
-</code></pre><p>[wbt@hadoop102 module]$ xsync kafka/
-&#x6CE8;&#x610F;&#xFF1A;&#x5206;&#x53D1;&#x4E4B;&#x540E;&#x8BB0;&#x5F97;&#x914D;&#x7F6E;&#x5176;&#x4ED6;&#x673A;&#x5668;&#x7684;&#x73AF;&#x5883;&#x53D8;&#x91CF;</p>
-<pre><code>7. &#x5206;&#x522B;&#x5728;hadoop103&#x548C;hadoop104&#x4E0A;&#x4FEE;&#x6539;&#x914D;&#x7F6E;&#x6587;&#x4EF6;/opt/module/kafka/config/
-</code></pre><p>server.properties&#x4E2D;&#x7684;broker.id=1&#x3001;broker.id=2
-    &#x6CE8;&#xFF1A;broker.id&#x4E0D;&#x5F97;&#x91CD;&#x590D;</p>
-<pre><code>8. &#x542F;&#x52A8;&#x96C6;&#x7FA4;  
-&#x4F9D;&#x6B21;&#x5728;hadoop102&#x3001;hadoop103&#x3001;hadoop104&#x8282;&#x70B9;&#x4E0A;&#x542F;&#x52A8;kafka
-</code></pre><p>[wbt@hadoop102 kafka]$ bin/kafka-server-start.sh config/server.properties &amp;
+<li>&#x914D;&#x7F6E;&#x73AF;&#x5883;&#x53D8;&#x91CF;  <pre><code>[wbt@hadoop102 module]$ sudo vi /etc/profile
+# KAFKA_HOME
+export KAFKA_HOME=/opt/module/kafka
+export PATH=$PATH:$KAFKA_HOME/bin
+[wbt@hadoop102 module]$ source /etc/profile
+</code></pre></li>
+<li>&#x5206;&#x53D1;&#x5B89;&#x88C5;&#x5305;<pre><code>[wbt@hadoop102 module]$ xsync kafka/
+&#x6CE8;&#x610F;&#xFF1A;&#x5206;&#x53D1;&#x4E4B;&#x540E;&#x8BB0;&#x5F97;&#x914D;&#x7F6E;&#x5176;&#x4ED6;&#x673A;&#x5668;&#x7684;&#x73AF;&#x5883;&#x53D8;&#x91CF;
+</code></pre></li>
+<li>&#x5206;&#x522B;&#x5728;hadoop103&#x548C;hadoop104&#x4E0A;&#x4FEE;&#x6539;&#x914D;&#x7F6E;&#x6587;&#x4EF6;/opt/module/kafka/config/<pre><code>server.properties&#x4E2D;&#x7684;broker.id=1&#x3001;broker.id=2
+ &#x6CE8;&#xFF1A;broker.id&#x4E0D;&#x5F97;&#x91CD;&#x590D;
+</code></pre></li>
+<li>&#x542F;&#x52A8;&#x96C6;&#x7FA4;<br>&#x4F9D;&#x6B21;&#x5728;hadoop102&#x3001;hadoop103&#x3001;hadoop104&#x8282;&#x70B9;&#x4E0A;&#x542F;&#x52A8;kafka<pre><code>[wbt@hadoop102 kafka]$ bin/kafka-server-start.sh config/server.properties &amp;
 [wbt@hadoop103 kafka]$ bin/kafka-server-start.sh config/server.properties &amp;
-[wbt@hadoop104 kafka]$ bin/kafka-server-start.sh config/server.properties &amp;</p>
-<pre><code>9. &#x5173;&#x95ED;&#x96C6;&#x7FA4;
-</code></pre><p>[wbt@hadoop102 kafka]$ bin/kafka-server-stop.sh stop
+[wbt@hadoop104 kafka]$ bin/kafka-server-start.sh config/server.properties &amp;
+</code></pre></li>
+<li>&#x5173;&#x95ED;&#x96C6;&#x7FA4;  <pre><code>[wbt@hadoop102 kafka]$ bin/kafka-server-stop.sh stop
 [wbt@hadoop103 kafka]$ bin/kafka-server-stop.sh stop
-[wbt@hadoop104 kafka]$ bin/kafka-server-stop.sh stop</p>
-<pre><code>
-# 2.3 Kafka&#x547D;&#x4EE4;&#x884C;&#x64CD;&#x4F5C;
-
-1. &#x67E5;&#x770B;&#x5F53;&#x524D;&#x670D;&#x52A1;&#x5668;&#x4E2D;&#x7684;&#x6240;&#x6709;topic
-</code></pre><p>[wbt@hadoop102 kafka]$ bin/kafka-topics.sh --zookeeper hadoop102:2181 --list</p>
-<pre><code>2. &#x521B;&#x5EFA;topic
-</code></pre><p>[wbt@hadoop102 kafka]$ bin/kafka-topics.sh --zookeeper hadoop102:2181 \
+[wbt@hadoop104 kafka]$ bin/kafka-server-stop.sh stop
+</code></pre></li>
+</ol>
+<h1 id="23-kafka&#x547D;&#x4EE4;&#x884C;&#x64CD;&#x4F5C;">2.3 Kafka&#x547D;&#x4EE4;&#x884C;&#x64CD;&#x4F5C;</h1>
+<ol>
+<li>&#x67E5;&#x770B;&#x5F53;&#x524D;&#x670D;&#x52A1;&#x5668;&#x4E2D;&#x7684;&#x6240;&#x6709;topic<pre><code>[wbt@hadoop102 kafka]$ bin/kafka-topics.sh --zookeeper hadoop102:2181 --list
+</code></pre></li>
+<li>&#x521B;&#x5EFA;topic<pre><code>[wbt@hadoop102 kafka]$ bin/kafka-topics.sh --zookeeper hadoop102:2181 \
 --create --replication-factor 3 --partitions 1 --topic first
 &#x9009;&#x9879;&#x8BF4;&#x660E;&#xFF1A;
 --topic &#x5B9A;&#x4E49;topic&#x540D;
 --replication-factor  &#x5B9A;&#x4E49;&#x526F;&#x672C;&#x6570;
---partitions  &#x5B9A;&#x4E49;&#x5206;&#x533A;&#x6570;</p>
-<pre><code>3. &#x5220;&#x9664;topic
-</code></pre><p>[wbt@hadoop102 kafka]$ bin/kafka-topics.sh --zookeeper hadoop102:2181 \
---delete --topic first</p>
-<pre><code>&#x9700;&#x8981;server.properties&#x4E2D;&#x8BBE;&#x7F6E;delete.topic.enable=true&#x5426;&#x5219;&#x53EA;&#x662F;&#x6807;&#x8BB0;&#x5220;&#x9664;&#x6216;&#x8005;&#x76F4;&#x63A5;&#x91CD;&#x542F;&#x3002;  
-4. &#x53D1;&#x9001;&#x6D88;&#x606F;
-</code></pre><p>[wbt@hadoop102 kafka]$ bin/kafka-console-producer.sh \
---broker-list hadoop102:9092 --topic first</p>
-<blockquote>
-<p>hello world
-wbt  wbt</p>
-<pre><code>5. &#x6D88;&#x8D39;&#x6D88;&#x606F;
-</code></pre><p>[wbt@hadoop103 kafka]$ bin/kafka-console-consumer.sh \
+--partitions  &#x5B9A;&#x4E49;&#x5206;&#x533A;&#x6570;
+</code></pre></li>
+<li>&#x5220;&#x9664;topic<pre><code>[wbt@hadoop102 kafka]$ bin/kafka-topics.sh --zookeeper hadoop102:2181 \
+--delete --topic first
+</code></pre>&#x9700;&#x8981;server.properties&#x4E2D;&#x8BBE;&#x7F6E;delete.topic.enable=true&#x5426;&#x5219;&#x53EA;&#x662F;&#x6807;&#x8BB0;&#x5220;&#x9664;&#x6216;&#x8005;&#x76F4;&#x63A5;&#x91CD;&#x542F;&#x3002;  </li>
+<li>&#x53D1;&#x9001;&#x6D88;&#x606F;<pre><code>[wbt@hadoop102 kafka]$ bin/kafka-console-producer.sh \
+--broker-list hadoop102:9092 --topic first
+&gt;hello world
+&gt;wbt  wbt
+</code></pre></li>
+<li>&#x6D88;&#x8D39;&#x6D88;&#x606F;<pre><code>[wbt@hadoop103 kafka]$ bin/kafka-console-consumer.sh \
 --zookeeper hadoop102:2181 --from-beginning --topic first
---from-beginning&#xFF1A;&#x4F1A;&#x628A;first&#x4E3B;&#x9898;&#x4E2D;&#x4EE5;&#x5F80;&#x6240;&#x6709;&#x7684;&#x6570;&#x636E;&#x90FD;&#x8BFB;&#x53D6;&#x51FA;&#x6765;&#x3002;&#x6839;&#x636E;&#x4E1A;&#x52A1;&#x573A;&#x666F;&#x9009;&#x62E9;&#x662F;&#x5426;&#x589E;&#x52A0;&#x8BE5;&#x914D;&#x7F6E;&#x3002;</p>
-<pre><code>6. &#x67E5;&#x770B;&#x67D0;&#x4E2A;Topic&#x7684;&#x8BE6;&#x60C5;
-</code></pre><p>[wbt@hadoop102 kafka]$ bin/kafka-topics.sh --zookeeper hadoop102:2181 \
+--from-beginning&#xFF1A;&#x4F1A;&#x628A;first&#x4E3B;&#x9898;&#x4E2D;&#x4EE5;&#x5F80;&#x6240;&#x6709;&#x7684;&#x6570;&#x636E;&#x90FD;&#x8BFB;&#x53D6;&#x51FA;&#x6765;&#x3002;&#x6839;&#x636E;&#x4E1A;&#x52A1;&#x573A;&#x666F;&#x9009;&#x62E9;&#x662F;&#x5426;&#x589E;&#x52A0;&#x8BE5;&#x914D;&#x7F6E;&#x3002;
+</code></pre></li>
+<li>&#x67E5;&#x770B;&#x67D0;&#x4E2A;Topic&#x7684;&#x8BE6;&#x60C5;<pre><code>[wbt@hadoop102 kafka]$ bin/kafka-topics.sh --zookeeper hadoop102:2181 \
 --describe --topic first
-```</p>
-</blockquote>
+</code></pre></li>
+</ol>
 
                                 
                                 </section>
@@ -539,7 +532,7 @@ wbt  wbt</p>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"KAFKA搭建","level":"1.2.11","depth":2,"next":{"title":"STORM搭建","level":"1.2.12","depth":2,"path":"build/10.storm组件部署.md","ref":"build/10.storm组件部署.md","articles":[]},"previous":{"title":"SPARK搭建","level":"1.2.10","depth":2,"path":"build/8.spark组件部署.md","ref":"build/8.spark组件部署.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"build/9.kafka组件部署.md","mtime":"2019-12-05T13:37:54.878Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-12-06T01:02:11.024Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"KAFKA搭建","level":"1.2.11","depth":2,"next":{"title":"STORM搭建","level":"1.2.12","depth":2,"path":"build/10.storm组件部署.md","ref":"build/10.storm组件部署.md","articles":[]},"previous":{"title":"SPARK搭建","level":"1.2.10","depth":2,"path":"build/8.spark组件部署.md","ref":"build/8.spark组件部署.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"build/9.kafka组件部署.md","mtime":"2019-12-06T01:55:18.837Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-12-06T01:48:49.248Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

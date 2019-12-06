@@ -408,93 +408,76 @@
                                 
                                 <h1 id="hbase&#x5206;&#x5E03;&#x5F0F;&#x5F00;&#x6E90;&#x6570;&#x636E;&#x5E93;&#x7EC4;&#x4EF6;&#x7684;&#x642D;&#x5EFA;">hbase&#x5206;&#x5E03;&#x5F0F;&#x5F00;&#x6E90;&#x6570;&#x636E;&#x5E93;&#x7EC4;&#x4EF6;&#x7684;&#x642D;&#x5EFA;</h1>
 <ol>
-<li>&#x4E0A;&#x4F20;hbase  </li>
-</ol>
-<p>&#x4E0B;&#x9762;&#x6211;&#x4EEC;&#x7528;winSCP&#x6216;&#x8005;mobaxterm&#x628A;hadoop&#x4F20;&#x8F93;&#x5230;&#x4E00;&#x53F0;&#x865A;&#x62DF;&#x673A;&#x4E0A;&#x7684;/usr/local/&#x76EE;&#x5F55;&#x4E0B;&#xFF0C;&#x7528;&#x8F6F;&#x4EF6;&#x8FDE;&#x63A5;&#x540E;&#xFF0C;&#x9009;&#x5230;/usr/local/&#x76EE;&#x5F55;&#x62D6;&#x8FDB;&#x53BB;&#x5C31;&#x53EF;&#x4EE5;&#x4E86;,&#x89E3;&#x538B;hadoop&#x5E76;&#x914D;&#x7F6E;&#x73AF;&#x5883;&#x53D8;&#x91CF;
-&#x5207;&#x6362;&#x5230;/usr/local/&#x76EE;&#x5F55;&#x4E0B;&#xFF0C;&#x6267;&#x884C;&#x547D;&#x4EE4;</p>
+<li><p>&#x4E0A;&#x4F20;hbase<br>&#x4E0B;&#x9762;&#x6211;&#x4EEC;&#x7528;winSCP&#x6216;&#x8005;mobaxterm&#x628A;hadoop&#x4F20;&#x8F93;&#x5230;&#x4E00;&#x53F0;&#x865A;&#x62DF;&#x673A;&#x4E0A;&#x7684;/usr/local/&#x76EE;&#x5F55;&#x4E0B;&#xFF0C;&#x7528;&#x8F6F;&#x4EF6;&#x8FDE;&#x63A5;&#x540E;&#xFF0C;&#x9009;&#x5230;/usr/local/&#x76EE;&#x5F55;&#x62D6;&#x8FDB;&#x53BB;&#x5C31;&#x53EF;&#x4EE5;&#x4E86;,&#x89E3;&#x538B;hadoop&#x5E76;&#x914D;&#x7F6E;&#x73AF;&#x5883;&#x53D8;&#x91CF;
+&#x5207;&#x6362;&#x5230;/usr/local/&#x76EE;&#x5F55;&#x4E0B;&#xFF0C;&#x6267;&#x884C;&#x547D;&#x4EE4;  </p>
 <pre><code>tar -zxvf hbase-2.0.2.tar.gz
-</code></pre><ol>
-<li>&#x89E3;&#x538B;&#x5B8C;&#x6210;&#x540E;&#xFF0C;&#x914D;&#x7F6E;&#x73AF;&#x5883;&#x53D8;&#x91CF;<pre><code>vi /etc/profile
+</code></pre></li>
+<li><p>&#x89E3;&#x538B;&#x5B8C;&#x6210;&#x540E;&#xFF0C;&#x914D;&#x7F6E;&#x73AF;&#x5883;&#x53D8;&#x91CF;</p>
+<pre><code>vi /etc/profile
 &#x5728;&#x672B;&#x5C3E;&#x52A0;&#x5165;&#x4EE5;&#x4E0B;&#x5185;&#x5BB9;
 </code></pre><pre><code>export HBASE_HOME=/usr/local/hbase-2.0.2 
 export PATH=$PATH:$HBASE_HOME/bin:/$HBASE_HOME/sbin
 </code></pre></li>
-<li>&#x4FEE;&#x6539;hadoop&#x4E2D;&#x7684;&#x4E00;&#x7CFB;&#x5217;&#x914D;&#x7F6E;&#x6587;&#x4EF6;</li>
-</ol>
+<li><p>&#x4FEE;&#x6539;hadoop&#x4E2D;&#x7684;&#x4E00;&#x7CFB;&#x5217;&#x914D;&#x7F6E;&#x6587;&#x4EF6;</p>
 <blockquote>
-<p>&#x6267;&#x884C;&#x547D;&#x4EE4; cd /usr/local/hbase-2.0.2/conf/ &#x5207;&#x6362;&#x5230;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x76EE;&#x5F55;</p>
+<p>&#x6267;&#x884C;&#x547D;&#x4EE4; cd /usr/local/hbase-2.0.2/conf/ &#x5207;&#x6362;&#x5230;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x76EE;&#x5F55;  </p>
 </blockquote>
-<ol>
-<li>&#x914D;&#x7F6E;hbase-env.sh&#x6587;&#x4EF6;<pre><code>&#x6267;&#x884C;&#x547D;&#x4EE4;vi hbase-env.sh
+</li>
+<li><p>&#x914D;&#x7F6E;hbase-env.sh&#x6587;&#x4EF6;</p>
+<pre><code>&#x6267;&#x884C;&#x547D;&#x4EE4;vi hbase-env.sh
 &#x4FEE;&#x6539;&#x4EE5;&#x4E0B;&#x5185;&#x5BB9;&#xFF0C;&#x5E76;&#x53D6;&#x6D88;&#x539F;&#x6587;&#x6CE8;&#x91CA;(#)
-</code></pre>```
-export JAVA_HOME=/usr/local/jdk1.8.0_181/
+</code></pre><pre><code>export JAVA_HOME=/usr/local/jdk1.8.0_181/
 export HBASE_CLASSPATH=/usr/local/hadoop-2.8.3/etc/hadoop
-export HBASE_MANAGES_ZK=false</li>
+export HBASE_MANAGES_ZK=false
+# &#x6DFB;&#x52A0;&#x4EE5;&#x4E0B;&#x5185;&#x5BB9;
+export TZ=&quot;Asia/Shanghai&quot;
+</code></pre><p>4.1 &#x914D;&#x7F6E;hbase-site.xml&#x6587;&#x4EF6;
+&#x6267;&#x884C;&#x547D;&#x4EE4; <code>vi hbase-site.xml</code>
+&#x5728;<code>&lt;configuration&gt;&lt;/configuration&gt;</code>&#x8282;&#x70B9;&#x5185;&#x52A0;&#x5165;&#x914D;&#x7F6E;:<br>&#x6CE8;&#xFF1A;&#x6587;&#x7AE0;&#x4E2D;&#x7684;mini1,mini2,mini3&#x8BF7;&#x4FEE;&#x6539;&#x4E3A;&#x81EA;&#x5DF1;&#x7684;&#x4E3B;&#x673A;&#x540D;&#x6216;&#x8005;ip&#x5730;&#x5740;</p>
+<pre><code>&lt;property&gt;  &lt;!--RegionServer &#x7684;&#x5171;&#x4EAB;&#x76EE;&#x5F55;&#xFF0C;&#x7528;&#x6765;&#x6301;&#x4E45;&#x5316; Hbase--&gt;
+&lt;name&gt;hbase.rootdir&lt;/name&gt;
+&lt;!&#x2013; &#x5982;&#x679C;&#x8981;&#x6307;&#x5B9A;HDFS&#x4E0A;&#x7684;&#x76EE;&#x5F55;&#xFF0C;&#x7AEF;&#x53E3;&#x53F7;&#x8981;&#x4E0E;hdfs-site.xml&#x4E2D;&#x8BBE;&#x4E3A;&#x4E00;&#x81F4;--&gt;
+&lt;value&gt;hdfs://mini1:9000/hbase&lt;/value&gt;
+&lt;/property&gt;
+&lt;property&gt;  &lt;!--&#x542F;&#x7528;&#x5206;&#x5E03;&#x5F0F;&#x96C6;&#x7FA4;--&gt;
+ &lt;name&gt;hbase.cluster.distributed&lt;/name&gt;
+ &lt;value&gt;true&lt;/value&gt;
+&lt;/property&gt;
+&lt;property&gt;   &lt;!--&#x9ED8;&#x8BA4;HMaster HTTP&#x8BBF;&#x95EE;&#x7AEF;&#x53E3;--&gt;
+ &lt;name&gt;hbase.master.info.port&lt;/name&gt;
+ &lt;value&gt;16010&lt;/value&gt;
+&lt;/property&gt;
+&lt;property&gt;   &lt;!--&#x9ED8;&#x8BA4;HRegionServer HTTP&#x8BBF;&#x95EE;&#x7AEF;&#x53E3;--&gt;
+&lt;name&gt;hbase.regionserver.info.port&lt;/name&gt;
+&lt;value&gt;16030&lt;/value&gt;
+&lt;/property&gt;
+&lt;property&gt;
+&lt;name&gt;hbase.zookeeper.quorum&lt;/name&gt;
+&lt;value&gt;mini1:2181,mini2:2181,mini3:2181&lt;/value&gt;
+&lt;/property&gt;
+&lt;property&gt;
+&#x3000; &#x3000;&lt;name&gt;hbase.zookeeper.property.dataDir&lt;/name&gt;
+&#x3000; &#x3000;&lt;value&gt;/usr/local/hbase-2.0.2/tmp/zk/data&lt;/value&gt;
+&#x3000;&lt;/property&gt;
+&lt;property&gt;
+&lt;name&gt;hbase.coprocessor.abortonerror&lt;/name&gt;
+&lt;value&gt;false&lt;/value&gt;
+&lt;/property&gt;
+</code></pre><p>4.2 &#x914D;&#x7F6E;regionservers&#x6587;&#x4EF6;<br>&#x6267;&#x884C;&#x547D;&#x4EE4; <code>vi regionservers</code><br>&#x6DFB;&#x52A0;&#x4EE5;&#x4E0B;&#x5185;&#x5BB9;&#xFF08;&#x5373;hadoop&#x4E2D;&#x914D;&#x7F6E;&#x7684;&#x4E24;&#x4E2A;datanode&#x7684;&#x4E3B;&#x673A;&#x540D;&#xFF09;<br>&#x6CE8;&#xFF1A;&#x6587;&#x7AE0;&#x4E2D;&#x7684;mini1,mini2,mini3&#x8BF7;&#x4FEE;&#x6539;&#x4E3A;&#x81EA;&#x5DF1;&#x7684;&#x4E3B;&#x673A;&#x540D;&#x6216;&#x8005;ip&#x5730;&#x5740;</p>
+<pre><code>mini2
+mini3
+</code></pre></li>
+<li><p>&#x5C06;hbase&#x4F20;&#x8F93;&#x81F3;&#x5176;&#x4ED6;&#x865A;&#x62DF;&#x673A;<br>&#x6CE8;&#xFF1A;&#x6587;&#x7AE0;&#x4E2D;&#x7684;mini1,mini2,mini3&#x8BF7;&#x4FEE;&#x6539;&#x4E3A;&#x81EA;&#x5DF1;&#x7684;&#x4E3B;&#x673A;&#x540D;&#x6216;&#x8005;ip&#x5730;&#x5740;</p>
+<pre><code>scp -r /usr/local/hbase-2.0.2 root@mini2:/usr/local/
+scp -r /usr/local/hbase-2.0.2 root@mini3:/usr/local/
+</code></pre><p>&#x914D;&#x7F6E;hbase&#x7684;&#x73AF;&#x5883;&#x53D8;&#x91CF;<br>&#x53C2;&#x8003;3&#x4E2D;&#x7684;&#x914D;&#x7F6E;&#x65B9;&#x6CD5;<br>&#x8BB0;&#x5F97;&#x6267;&#x884C; <code>source /etc/profile</code> &#x4F7F;&#x73AF;&#x5883;&#x53D8;&#x91CF;&#x751F;&#x6548;  </p>
+</li>
+<li>&#x542F;&#x52A8;hbase<br>&#x6CE8;&#xFF1A;&#x5728;&#x542F;&#x52A8;hbase&#x524D;&#xFF0C;&#x5148;&#x542F;&#x52A8;zookeeper&#x548C;hadoop<br>&#x5728;master&#x673A;&#x5668;&#x4E0A;&#xFF08;mini1&#xFF09;&#x6267;&#x884C;&#x547D;&#x4EE4;  <pre><code>start-hbase.sh
+</code></pre>&#x5982;&#x679C;&#x8981;&#x5173;&#x95ED;hbase &#xFF0C;&#x53EF;&#x4EE5;&#x6267;&#x884C;&#x547D;&#x4EE4;<code>stop-hbase.sh</code>  </li>
+<li>&#x6D4B;&#x8BD5;hbase<br>&#x6253;&#x5F00;&#x6D4F;&#x89C8;&#x5668;&#xFF08;&#x4E0D;&#x8981;&#x7528;IE&#x6216;&#x8005;Edge&#x5EFA;&#x8BAE;&#x8C37;&#x6B4C;&#x6D4F;&#x89C8;&#x5668;&#x6216;&#x706B;&#x72D0;&#x6D4F;&#x89C8;&#x5668;&#xFF09;<br>&#x901A;&#x8FC7;&#x4E0B;&#x9762;&#x7684;&#x94FE;&#x63A5;&#x6765;&#x6D4B;&#x8BD5;&#xFF0C;&#x5982;&#x679C;&#x4E0D;&#x884C;&#x53EF;&#x4EE5;&#x5173;&#x95ED;linux&#x9632;&#x706B;&#x5899;&#x518D;&#x8BD5;&#x4E00;&#x6B21;<br>&#x6CE8;&#xFF1A;&#x6587;&#x7AE0;&#x4E2D;&#x7684;mini1,mini2,mini3&#x8BF7;&#x4FEE;&#x6539;&#x4E3A;&#x81EA;&#x5DF1;&#x7684;&#x4E3B;&#x673A;&#x540D;&#x6216;&#x8005;ip&#x5730;&#x5740;  <pre><code>http://mini1:16010/master-status
+http://mini2:16030/rs-status
+</code></pre></li>
 </ol>
-<h1 id="&#x6DFB;&#x52A0;&#x4EE5;&#x4E0B;&#x5185;&#x5BB9;">&#x6DFB;&#x52A0;&#x4EE5;&#x4E0B;&#x5185;&#x5BB9;</h1>
-<p>export TZ=&quot;Asia/Shanghai&quot;</p>
-<pre><code>
-4. 1 &#x914D;&#x7F6E;hbase-site.xml&#x6587;&#x4EF6;
-&#x6267;&#x884C;&#x547D;&#x4EE4; `vi hbase-site.xml`
-&#x5728;`&lt;configuration&gt;&lt;/configuration&gt;`&#x8282;&#x70B9;&#x5185;&#x52A0;&#x5165;&#x914D;&#x7F6E;:  
-&#x6CE8;&#xFF1A;&#x6587;&#x7AE0;&#x4E2D;&#x7684;mini1,mini2,mini3&#x8BF7;&#x4FEE;&#x6539;&#x4E3A;&#x81EA;&#x5DF1;&#x7684;&#x4E3B;&#x673A;&#x540D;&#x6216;&#x8005;ip&#x5730;&#x5740;
-</code></pre><p><property>  <!--RegionServer 的共享目录，用来持久化 Hbase-->
-   <name>hbase.rootdir</name>
-   &lt;!&#x2013; &#x5982;&#x679C;&#x8981;&#x6307;&#x5B9A;HDFS&#x4E0A;&#x7684;&#x76EE;&#x5F55;&#xFF0C;&#x7AEF;&#x53E3;&#x53F7;&#x8981;&#x4E0E;hdfs-site.xml&#x4E2D;&#x8BBE;&#x4E3A;&#x4E00;&#x81F4;--&gt;
-   <value>hdfs://mini1:9000/hbase</value>
-</property></p>
-<p><property>  <!--启用分布式集群-->
-    <name>hbase.cluster.distributed</name>
-    <value>true</value>
-</property></p>
-<p><property>   <!--默认HMaster HTTP访问端口-->
-    <name>hbase.master.info.port</name>
-    <value>16010</value>
-</property></p>
-<p><property>   <!--默认HRegionServer HTTP访问端口-->
-  <name>hbase.regionserver.info.port</name>
-  <value>16030</value>
-</property></p>
-<p><property>
-  <name>hbase.zookeeper.quorum</name>
-  <value>mini1:2181,mini2:2181,mini3:2181</value>
-</property></p>
-<p><property>
-&#x3000; &#x3000;<name>hbase.zookeeper.property.dataDir</name>
-&#x3000; &#x3000;<value>/usr/local/hbase-2.0.2/tmp/zk/data</value>
-&#x3000;</property></p>
-<p><property>
-  <name>hbase.coprocessor.abortonerror</name>
-  <value>false</value>
-</property></p>
-<pre><code>
-4. 2 &#x914D;&#x7F6E;regionservers&#x6587;&#x4EF6;  
-
-&#x6267;&#x884C;&#x547D;&#x4EE4; `vi regionservers`  
-&#x6DFB;&#x52A0;&#x4EE5;&#x4E0B;&#x5185;&#x5BB9;&#xFF08;&#x5373;hadoop&#x4E2D;&#x914D;&#x7F6E;&#x7684;&#x4E24;&#x4E2A;datanode&#x7684;&#x4E3B;&#x673A;&#x540D;&#xFF09;  
-&#x6CE8;&#xFF1A;&#x6587;&#x7AE0;&#x4E2D;&#x7684;mini1,mini2,mini3&#x8BF7;&#x4FEE;&#x6539;&#x4E3A;&#x81EA;&#x5DF1;&#x7684;&#x4E3B;&#x673A;&#x540D;&#x6216;&#x8005;ip&#x5730;&#x5740;
-</code></pre><p>mini2
-mini3</p>
-<pre><code>5. &#x5C06;hbase&#x4F20;&#x8F93;&#x81F3;&#x5176;&#x4ED6;&#x865A;&#x62DF;&#x673A;  
-&#x6CE8;&#xFF1A;&#x6587;&#x7AE0;&#x4E2D;&#x7684;mini1,mini2,mini3&#x8BF7;&#x4FEE;&#x6539;&#x4E3A;&#x81EA;&#x5DF1;&#x7684;&#x4E3B;&#x673A;&#x540D;&#x6216;&#x8005;ip&#x5730;&#x5740;
-</code></pre><p>scp -r /usr/local/hbase-2.0.2 root@mini2:/usr/local/
-scp -r /usr/local/hbase-2.0.2 root@mini3:/usr/local/</p>
-<pre><code>&#x914D;&#x7F6E;hbase&#x7684;&#x73AF;&#x5883;&#x53D8;&#x91CF;  
-&#x53C2;&#x8003;3&#x4E2D;&#x7684;&#x914D;&#x7F6E;&#x65B9;&#x6CD5;    
-&#x8BB0;&#x5F97;&#x6267;&#x884C; source /etc/profile &#x4F7F;&#x73AF;&#x5883;&#x53D8;&#x91CF;&#x751F;&#x6548;  
-6. &#x542F;&#x52A8;hbase  
-&#x6CE8;&#xFF1A;&#x5728;&#x542F;&#x52A8;hbase&#x524D;&#xFF0C;&#x5148;&#x542F;&#x52A8;zookeeper&#x548C;hadoop  
-&#x5728;master&#x673A;&#x5668;&#x4E0A;&#xFF08;mini1&#xFF09;&#x6267;&#x884C;&#x547D;&#x4EE4;
-</code></pre><p>start-hbase.sh</p>
-<pre><code>&#x5982;&#x679C;&#x8981;&#x5173;&#x95ED;hbase &#xFF0C;&#x53EF;&#x4EE5;&#x6267;&#x884C;&#x547D;&#x4EE4;`stop-hbase.sh`  
-7. &#x6D4B;&#x8BD5;hbase  
-&#x6253;&#x5F00;&#x6D4F;&#x89C8;&#x5668;&#xFF08;&#x4E0D;&#x8981;&#x7528;IE&#x6216;&#x8005;Edge&#x5EFA;&#x8BAE;&#x8C37;&#x6B4C;&#x6D4F;&#x89C8;&#x5668;&#x6216;&#x706B;&#x72D0;&#x6D4F;&#x89C8;&#x5668;&#xFF09;  
-&#x901A;&#x8FC7;&#x4E0B;&#x9762;&#x7684;&#x94FE;&#x63A5;&#x6765;&#x6D4B;&#x8BD5;&#xFF0C;&#x5982;&#x679C;&#x4E0D;&#x884C;&#x53EF;&#x4EE5;&#x5173;&#x95ED;linux&#x9632;&#x706B;&#x5899;&#x518D;&#x8BD5;&#x4E00;&#x6B21;  
-&#x6CE8;&#xFF1A;&#x6587;&#x7AE0;&#x4E2D;&#x7684;mini1,mini2,mini3&#x8BF7;&#x4FEE;&#x6539;&#x4E3A;&#x81EA;&#x5DF1;&#x7684;&#x4E3B;&#x673A;&#x540D;&#x6216;&#x8005;ip&#x5730;&#x5740;
-</code></pre><p><a href="http://mini1:16010/master-status" target="_blank">http://mini1:16010/master-status</a>
-<a href="http://mini2:16030/rs-status" target="_blank">http://mini2:16030/rs-status</a>
-```</p>
 
                                 
                                 </section>
@@ -538,7 +521,7 @@ scp -r /usr/local/hbase-2.0.2 root@mini3:/usr/local/</p>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"HBASE搭建","level":"1.2.8","depth":2,"next":{"title":"FLUME搭建","level":"1.2.9","depth":2,"path":"build/7.flume组件部署.md","ref":"build/7.flume组件部署.md","articles":[]},"previous":{"title":"SQOOP搭建","level":"1.2.7","depth":2,"path":"build/5.sqoop组件部署.md","ref":"build/5.sqoop组件部署.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"build/6.hbase组件部署.md","mtime":"2019-12-05T13:36:15.839Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-12-06T01:02:11.024Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"HBASE搭建","level":"1.2.8","depth":2,"next":{"title":"FLUME搭建","level":"1.2.9","depth":2,"path":"build/7.flume组件部署.md","ref":"build/7.flume组件部署.md","articles":[]},"previous":{"title":"SQOOP搭建","level":"1.2.7","depth":2,"path":"build/5.sqoop组件部署.md","ref":"build/5.sqoop组件部署.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"build/6.hbase组件部署.md","mtime":"2019-12-06T01:45:54.532Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-12-06T01:48:49.248Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

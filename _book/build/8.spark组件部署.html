@@ -420,26 +420,25 @@ export PATH=$PATH:$SCALA_HOME/bin
 <h3 id="13-&#x9A8C;&#x8BC1;scala">1.3 &#x9A8C;&#x8BC1;Scala</h3>
 <pre><code>scala -version
 </code></pre><h2 id="2-&#x4E0B;&#x8F7D;&#x548C;&#x89E3;&#x538B;&#x7F29;spark">2 &#x4E0B;&#x8F7D;&#x548C;&#x89E3;&#x538B;&#x7F29;Spark</h2>
-<pre><code>  &#x5728;&#x6BCF;&#x4E2A;&#x8282;&#x70B9;&#x4E0A;&#x90FD;&#x5B89;&#x88C5;Spark&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x91CD;&#x590D;&#x4E0B;&#x9762;&#x7684;&#x6B65;&#x9AA4;&#x3002;
-</code></pre><p>2.1 &#x4E0B;&#x8F7D;Spark&#x538B;&#x7F29;&#x5305;</p>
+<p>&#x5728;&#x6BCF;&#x4E2A;&#x8282;&#x70B9;&#x4E0A;&#x90FD;&#x5B89;&#x88C5;Spark&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x91CD;&#x590D;&#x4E0B;&#x9762;&#x7684;&#x6B65;&#x9AA4;&#x3002;</p>
+<p>2.1 &#x4E0B;&#x8F7D;Spark&#x538B;&#x7F29;&#x5305;</p>
 <p>&#x6267;&#x884C;&#x89E3;&#x538B;&#x7F29;&#x547D;&#x4EE4;&#xFF1A;</p>
-<pre><code>tar   -zxf   spark-2.1.1-bin-hadoop2.7.tgz -C /usr/local/
+<pre><code>tar -zxf spark-2.1.1-bin-hadoop2.7.tgz -C /usr/local/
 </code></pre><h1 id="3-spark&#x76F8;&#x5173;&#x7684;&#x914D;&#x7F6E;">3. Spark&#x76F8;&#x5173;&#x7684;&#x914D;&#x7F6E;</h1>
-<pre><code>     &#x8BF4;&#x660E;&#xFF1A;&#x56E0;&#x4E3A;&#x6211;&#x4EEC;&#x642D;&#x5EFA;&#x7684;&#x662F;&#x57FA;&#x4E8E;hadoop&#x96C6;&#x7FA4;&#x7684;Spark&#x96C6;&#x7FA4;&#xFF0C;&#x6240;&#x4EE5;&#x6BCF;&#x4E2A;hadoop&#x8282;&#x70B9;&#x4E0A;&#x6211;&#x90FD;&#x5B89;&#x88C5;&#x4E86;Spark&#xFF0C;&#x90FD;&#x9700;&#x8981;&#x6309;&#x7167;&#x4E0B;&#x9762;&#x7684;&#x6B65;&#x9AA4;&#x505A;&#x914D;&#x7F6E;&#xFF0C;&#x542F;&#x52A8;&#x7684;&#x8BDD;&#x53EA;&#x9700;&#x8981;&#x5728;Spark&#x96C6;&#x7FA4;&#x7684;Master&#x673A;&#x5668;&#x4E0A;&#x542F;&#x52A8;&#x5373;&#x53EF;&#x3002;
-</code></pre><p>3.1  &#x914D;&#x7F6E;&#x73AF;&#x5883;&#x53D8;&#x91CF;</p>
+<p>&#x8BF4;&#x660E;&#xFF1A;&#x56E0;&#x4E3A;&#x6211;&#x4EEC;&#x642D;&#x5EFA;&#x7684;&#x662F;&#x57FA;&#x4E8E;hadoop&#x96C6;&#x7FA4;&#x7684;Spark&#x96C6;&#x7FA4;&#xFF0C;&#x6240;&#x4EE5;&#x6BCF;&#x4E2A;hadoop&#x8282;&#x70B9;&#x4E0A;&#x6211;&#x90FD;&#x5B89;&#x88C5;&#x4E86;Spark&#xFF0C;&#x90FD;&#x9700;&#x8981;&#x6309;&#x7167;&#x4E0B;&#x9762;&#x7684;&#x6B65;&#x9AA4;&#x505A;&#x914D;&#x7F6E;&#xFF0C;&#x542F;&#x52A8;&#x7684;&#x8BDD;&#x53EA;&#x9700;&#x8981;&#x5728;Spark&#x96C6;&#x7FA4;&#x7684;Master&#x673A;&#x5668;&#x4E0A;&#x542F;&#x52A8;&#x5373;&#x53EF;&#x3002;</p>
+<p>3.1  &#x914D;&#x7F6E;&#x73AF;&#x5883;&#x53D8;&#x91CF;</p>
 <pre><code>export  SPARK_HOME=/usr/local//spark-2.1.1-bin-hadoop2.7
-      &#x4E0A;&#x9762;&#x7684;&#x53D8;&#x91CF;&#x6DFB;&#x52A0;&#x5B8C;&#x6210;&#x540E;&#x7F16;&#x8F91;&#x8BE5;&#x6587;&#x4EF6;&#x4E2D;&#x7684;PATH&#x53D8;&#x91CF;&#xFF0C;&#x6DFB;&#x52A0;
-
+# &#x4E0A;&#x9762;&#x7684;&#x53D8;&#x91CF;&#x6DFB;&#x52A0;&#x5B8C;&#x6210;&#x540E;&#x7F16;&#x8F91;&#x8BE5;&#x6587;&#x4EF6;&#x4E2D;&#x7684;PATH&#x53D8;&#x91CF;&#xFF0C;&#x6DFB;&#x52A0;
 export PATH=$PATH:$SPARK_HOME/bin
 </code></pre><p>&#x5B8C;&#x6210;&#x4F7F;&#x7528;<code>source</code>&#x66F4;&#x65B0;&#x73AF;&#x5883;&#x53D8;&#x91CF;</p>
 <h3 id="32-&#x914D;&#x7F6E;conf&#x76EE;&#x5F55;&#x4E0B;&#x7684;&#x6587;&#x4EF6;">3.2 &#x914D;&#x7F6E;conf&#x76EE;&#x5F55;&#x4E0B;&#x7684;&#x6587;&#x4EF6;</h3>
-<pre><code>     &#x5BF9;/usr/local/spark-2.1.1-bin-hadoop2.7/conf&#x76EE;&#x5F55;&#x4E0B;&#x7684;&#x6587;&#x4EF6;&#x8FDB;&#x884C;&#x914D;&#x7F6E;&#x3002;
-</code></pre><h3 id="321--&#x65B0;&#x5EFA;spark-envh&#x6587;&#x4EF6;">3.2.1  &#x65B0;&#x5EFA;spark-env.h&#x6587;&#x4EF6;</h3>
-<pre><code>    &#x6267;&#x884C;&#x547D;&#x4EE4;&#xFF0C;&#x8FDB;&#x5165;&#x5230;/usr/local//spark-2.1.1-bin-hadoop2.7/conf&#x76EE;&#x5F55;&#x5185;&#xFF1A;
-</code></pre><pre><code>cd    /usr/local//spark-2.1.1-bin-hadoop2.7/conf
-</code></pre><pre><code>   &#x4EE5;spark&#x4E3A;&#x6211;&#x4EEC;&#x521B;&#x5EFA;&#x597D;&#x7684;&#x6A21;&#x677F;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;spark-env.h&#x6587;&#x4EF6;&#xFF0C;&#x547D;&#x4EE4;&#x662F;&#xFF1A;
-</code></pre><pre><code>cp    spark-env.sh.template   spark-env.sh
-</code></pre><p>&#x7F16;&#x8F91;spark-env.h&#x6587;&#x4EF6;&#xFF0C;&#x5728;&#x91CC;&#x9762;&#x52A0;&#x5165;&#x914D;&#x7F6E;(&#x5177;&#x4F53;&#x8DEF;&#x5F84;&#x4EE5;&#x81EA;&#x5DF1;&#x7684;&#x4E3A;&#x51C6;)&#xFF1A;</p>
+<p>&#x5BF9;<code>/usr/local/spark-2.1.1-bin-hadoop2.7/conf</code>&#x76EE;&#x5F55;&#x4E0B;&#x7684;&#x6587;&#x4EF6;&#x8FDB;&#x884C;&#x914D;&#x7F6E;&#x3002;</p>
+<h3 id="321--&#x65B0;&#x5EFA;spark-envh&#x6587;&#x4EF6;">3.2.1  &#x65B0;&#x5EFA;spark-env.h&#x6587;&#x4EF6;</h3>
+<p>&#x6267;&#x884C;&#x547D;&#x4EE4;&#xFF0C;&#x8FDB;&#x5165;&#x5230;<code>/usr/local//spark-2.1.1-bin-hadoop2.7/conf</code>&#x76EE;&#x5F55;&#x5185;&#xFF1A;</p>
+<pre><code>cd /usr/local//spark-2.1.1-bin-hadoop2.7/conf
+</code></pre><p>&#x4EE5;spark&#x4E3A;&#x6211;&#x4EEC;&#x521B;&#x5EFA;&#x597D;&#x7684;&#x6A21;&#x677F;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;<code>spark-env.sh</code>&#x6587;&#x4EF6;&#xFF0C;&#x547D;&#x4EE4;&#x662F;&#xFF1A;</p>
+<pre><code>cp spark-env.sh.template spark-env.sh
+</code></pre><p>&#x7F16;&#x8F91;<code>spark-env.sh</code>&#x6587;&#x4EF6;&#xFF0C;&#x5728;&#x91CC;&#x9762;&#x52A0;&#x5165;&#x914D;&#x7F6E;(&#x5177;&#x4F53;&#x8DEF;&#x5F84;&#x4EE5;&#x81EA;&#x5DF1;&#x7684;&#x4E3A;&#x51C6;)&#xFF1A;</p>
 <pre><code>export SCALA_HOME=/opt/scala/scala-2.12.2
 export JAVA_HOME=/opt/java/jdk1.8.0_121
 export HADOOP_HOME=/opt/hadoop/hadoop-2.8.0
@@ -448,25 +447,24 @@ export SPARK_HOME=/usr/local/spark-2.1.1-bin-hadoop2.7
 export SPARK_MASTER_IP=Master
 export SPARK_EXECUTOR_MEMORY=1G
 </code></pre><p>3.2.2 &#x65B0;&#x5EFA;slaves&#x6587;&#x4EF6;
-&#x6267;&#x884C;&#x547D;&#x4EE4;&#xFF0C;&#x8FDB;&#x5165;&#x5230;/usr/local/spark-2.1.1-bin-hadoop2.7/conf&#x76EE;&#x5F55;&#x5185;&#xFF1A;</p>
-<p>cd   /usr/local/spark-2.1.1-bin-hadoop2.7/conf</p>
-<p>&#x4EE5;spark&#x4E3A;&#x6211;&#x4EEC;&#x521B;&#x5EFA;&#x597D;&#x7684;&#x6A21;&#x677F;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;slaves&#x6587;&#x4EF6;&#xFF0C;&#x547D;&#x4EE4;&#x662F;&#xFF1A;</p>
-<pre><code>cp    slaves.template   slaves
-</code></pre><p>&#x7F16;&#x8F91;slaves&#x6587;&#x4EF6;&#xFF0C;&#x91CC;&#x9762;&#x7684;&#x5185;&#x5BB9;&#x4E3A;&#xFF1A;</p>
+&#x6267;&#x884C;&#x547D;&#x4EE4;&#xFF0C;&#x8FDB;&#x5165;&#x5230;<code>/usr/local/spark-2.1.1-bin-hadoop2.7/conf</code>&#x76EE;&#x5F55;&#x5185;&#xFF1A;</p>
+<p>cd /usr/local/spark-2.1.1-bin-hadoop2.7/conf</p>
+<p>&#x4EE5;spark&#x4E3A;&#x6211;&#x4EEC;&#x521B;&#x5EFA;&#x597D;&#x7684;&#x6A21;&#x677F;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;<code>slaves</code>&#x6587;&#x4EF6;&#xFF0C;&#x547D;&#x4EE4;&#x662F;&#xFF1A;</p>
+<pre><code>cp slaves.template slaves
+</code></pre><p>&#x7F16;&#x8F91;<code>slaves</code>&#x6587;&#x4EF6;&#xFF0C;&#x91CC;&#x9762;&#x7684;&#x5185;&#x5BB9;&#x4E3A;&#xFF1A;</p>
 <pre><code>slave1
 slave2
 </code></pre><h2 id="4-&#x542F;&#x52A8;&#x548C;&#x6D4B;&#x8BD5;spark&#x96C6;&#x7FA4;">4 &#x542F;&#x52A8;&#x548C;&#x6D4B;&#x8BD5;Spark&#x96C6;&#x7FA4;</h2>
 <h3 id="41-&#x542F;&#x52A8;spark">4.1 &#x542F;&#x52A8;Spark</h3>
-<pre><code>    &#x5728;hadoop&#x6B63;&#x5E38;&#x8FD0;&#x884C;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x5728;Master&#xFF08;&#x4E5F;&#x5C31;&#x662F;hadoop&#x7684;namenode&#xFF0C;spark&#x7684;marster&#x8282;&#x70B9;&#xFF09;&#x4E0A;&#x6267;&#x884C;&#x547D;&#x4EE4;&#xFF1A;
-</code></pre><p>   cd   /usr/local//spark-2.1.1-bin-hadoop2.7/sbin</p>
-<pre><code>&#x6267;&#x884C;&#x542F;&#x52A8;&#x811A;&#x672C;&#xFF1A;
-</code></pre><p>  ./start-all.sh</p>
+<p>&#x5728;hadoop&#x6B63;&#x5E38;&#x8FD0;&#x884C;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x5728;Master&#xFF08;&#x4E5F;&#x5C31;&#x662F;hadoop&#x7684;namenode&#xFF0C;spark&#x7684;marster&#x8282;&#x70B9;&#xFF09;&#x4E0A;&#x6267;&#x884C;&#x547D;&#x4EE4;&#xFF1A;</p>
+<pre><code>cd /usr/local//spark-2.1.1-bin-hadoop2.7/sbin
+</code></pre><h4 id="&#x6267;&#x884C;&#x542F;&#x52A8;&#x811A;&#x672C;&#xFF1A;">&#x6267;&#x884C;&#x542F;&#x52A8;&#x811A;&#x672C;&#xFF1A;</h4>
+<p><code>./start-all.sh</code></p>
 <h2 id="42--&#x6D4B;&#x8BD5;&#x548C;&#x4F7F;&#x7528;spark&#x96C6;&#x7FA4;">4.2  &#x6D4B;&#x8BD5;&#x548C;&#x4F7F;&#x7528;Spark&#x96C6;&#x7FA4;</h2>
 <h3 id="421--&#x8BBF;&#x95EE;spark&#x96C6;&#x7FA4;&#x63D0;&#x4F9B;&#x7684;url">4.2.1  &#x8BBF;&#x95EE;Spark&#x96C6;&#x7FA4;&#x63D0;&#x4F9B;&#x7684;URL</h3>
-<pre><code>    &#x5728;&#x6D4F;&#x89C8;&#x5668;&#x91CC;&#x8BBF;&#x95EE;Mster&#x673A;&#x5668;&#xFF0C;&#x6211;&#x7684;Spark&#x96C6;&#x7FA4;&#x91CC;Master&#x673A;&#x5668;&#x662F;master&#xFF0C;IP&#x5730;&#x5740;&#x662F;192.168.27.143&#xFF0C;&#x8BBF;&#x95EE;8080&#x7AEF;&#x53E3;&#xFF0C;URL&#x662F;&#xFF1A;http://192.168.27.143:8080/
-
-   &#x5982;&#x56FE;&#xFF1A;
-</code></pre><p><img src="https://img-blog.csdn.net/20170516222530790?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvcHVjYW9fY3Vn/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center" alt=""></p>
+<p>&#x5728;&#x6D4F;&#x89C8;&#x5668;&#x91CC;&#x8BBF;&#x95EE;Mster&#x673A;&#x5668;&#xFF0C;&#x6211;&#x7684;Spark&#x96C6;&#x7FA4;&#x91CC;Master&#x673A;&#x5668;&#x662F;master&#xFF0C;IP&#x5730;&#x5740;&#x662F;192.168.27.143&#xFF0C;&#x8BBF;&#x95EE;8080&#x7AEF;&#x53E3;&#xFF0C;URL&#x662F;&#xFF1A;<a href="http://192.168.27.143:8080/" target="_blank">http://192.168.27.143:8080/</a></p>
+<h2 id="&#x5982;&#x56FE;&#xFF1A;">&#x5982;&#x56FE;&#xFF1A;</h2>
+<p><img src="http://tmp.wyjsjxh.com/201912060849_491.png" alt=""></p>
 
                                 
                                 </section>
@@ -510,7 +508,7 @@ slave2
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"SPARK搭建","level":"1.2.10","depth":2,"next":{"title":"KAFKA搭建","level":"1.2.11","depth":2,"path":"build/9.kafka组件部署.md","ref":"build/9.kafka组件部署.md","articles":[]},"previous":{"title":"FLUME搭建","level":"1.2.9","depth":2,"path":"build/7.flume组件部署.md","ref":"build/7.flume组件部署.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"build/8.spark组件部署.md","mtime":"2019-12-05T13:37:24.937Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-12-06T01:02:11.024Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"SPARK搭建","level":"1.2.10","depth":2,"next":{"title":"KAFKA搭建","level":"1.2.11","depth":2,"path":"build/9.kafka组件部署.md","ref":"build/9.kafka组件部署.md","articles":[]},"previous":{"title":"FLUME搭建","level":"1.2.9","depth":2,"path":"build/7.flume组件部署.md","ref":"build/7.flume组件部署.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"build/8.spark组件部署.md","mtime":"2019-12-06T01:53:34.651Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-12-06T01:48:49.248Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
