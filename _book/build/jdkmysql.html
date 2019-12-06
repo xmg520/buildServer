@@ -153,7 +153,20 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.4" data-path="3.hadoopha部署.html">
+        <li class="chapter " data-level="1.2.4" data-path="hadoopha.html">
+            
+                <a href="hadoopha.html">
+            
+                    
+                    hadoopHa介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="3.hadoopha部署.html">
             
                 <a href="3.hadoopha部署.html">
             
@@ -166,7 +179,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.5" data-path="4.hive组件部署.html">
+        <li class="chapter " data-level="1.2.6" data-path="4.hive组件部署.html">
             
                 <a href="4.hive组件部署.html">
             
@@ -179,7 +192,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.6" data-path="5.sqoop组件部署.html">
+        <li class="chapter " data-level="1.2.7" data-path="5.sqoop组件部署.html">
             
                 <a href="5.sqoop组件部署.html">
             
@@ -192,7 +205,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.7" data-path="6.hbase组件部署.html">
+        <li class="chapter " data-level="1.2.8" data-path="6.hbase组件部署.html">
             
                 <a href="6.hbase组件部署.html">
             
@@ -205,7 +218,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.8" data-path="7.flume组件部署.html">
+        <li class="chapter " data-level="1.2.9" data-path="7.flume组件部署.html">
             
                 <a href="7.flume组件部署.html">
             
@@ -218,7 +231,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.9" data-path="8.spark组件部署.html">
+        <li class="chapter " data-level="1.2.10" data-path="8.spark组件部署.html">
             
                 <a href="8.spark组件部署.html">
             
@@ -231,7 +244,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.10" data-path="9.kafka组件部署.html">
+        <li class="chapter " data-level="1.2.11" data-path="9.kafka组件部署.html">
             
                 <a href="9.kafka组件部署.html">
             
@@ -244,7 +257,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.11" data-path="10.storm组件部署.html">
+        <li class="chapter " data-level="1.2.12" data-path="10.storm组件部署.html">
             
                 <a href="10.storm组件部署.html">
             
@@ -257,7 +270,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.12" data-path="11.zookeeper组件部署.html">
+        <li class="chapter " data-level="1.2.13" data-path="11.zookeeper组件部署.html">
             
                 <a href="11.zookeeper组件部署.html">
             
@@ -419,7 +432,7 @@
 <p>&#x67E5;&#x770B;&#x5185;&#x7F6E;JDK  </p>
 </blockquote>
 <p>rpm -qa | grep jdk  </p>
-<p><img src="http://tmp.mada8.com/201906142355_391.png" alt=""></p>
+<p><img src="http://tmp.wyjsjxh.com/201906142355_391.png" alt=""></p>
 <blockquote>
 <p>&#x5378;&#x8F7D;&#x5185;&#x7F6E;JDK  </p>
 </blockquote>
@@ -438,7 +451,7 @@ export HADOOP_HOME=/usr/local/hadoop
 export PATH=$PATH:$HADOOP_HOME/bin:$HADOOP_HOME/sbin
 </code></pre><p>&#x8FD0;&#x884C;:<code>source ~/.bashrc</code>&#x66F4;&#x65B0;&#x73AF;&#x5883;&#x53D8;&#x91CF;</p>
 <h3 id="&#x6210;&#x529F;&#x622A;&#x56FE;">&#x6210;&#x529F;&#x622A;&#x56FE;</h3>
-<p><img src="http://tmp.mada8.com/201906142359_636.png" alt=""></p>
+<p><img src="http://tmp.wyjsjxh.com/201906142359_636.png" alt=""></p>
 <hr>
 <h1 id="&#x4E09;&#x3001;centos7-&#x79BB;&#x7EBF;&#x5B89;&#x88C5;mysql-5716">&#x4E09;&#x3001;CentOS7 &#x79BB;&#x7EBF;&#x5B89;&#x88C5;mysql-5.7.16</h1>
 <h2 id="1--&#x5B89;&#x88C5;&#x65B0;&#x7248;mysql&#x524D;&#xFF0C;&#x9700;&#x5C06;&#x7CFB;&#x7EDF;&#x81EA;&#x5E26;&#x7684;mariadb-lib&#x5378;&#x8F7D;">1 . &#x5B89;&#x88C5;&#x65B0;&#x7248;mysql&#x524D;&#xFF0C;&#x9700;&#x5C06;&#x7CFB;&#x7EDF;&#x81EA;&#x5E26;&#x7684;mariadb-lib&#x5378;&#x8F7D;</h2>
@@ -497,7 +510,7 @@ mysql&gt; FULSH PRIVILEGES;
 </code></pre><h2 id="8--&#x8FDC;&#x7A0B;&#x767B;&#x9646;&#x6388;&#x6743;">8 . &#x8FDC;&#x7A0B;&#x767B;&#x9646;&#x6388;&#x6743;</h2>
 <pre><code>mysql&gt; grant all privileges on *.* to &apos;root&apos;@&apos;%&apos; identified by &apos;1234&apos; with grant option;
 
-mysql&gt; flush privileges;
+mysql&gt; FLUSH PRIVILEGES;
 </code></pre><h2 id="9--&#x8BBE;&#x7F6E;mysql&#x5F00;&#x673A;&#x542F;&#x52A8;">9 . &#x8BBE;&#x7F6E;mysql&#x5F00;&#x673A;&#x542F;&#x52A8;</h2>
 <pre><code>// &#x68C0;&#x67E5;&#x662F;&#x5426;&#x5DF2;&#x7ECF;&#x662F;&#x5F00;&#x673A;&#x542F;&#x52A8;
 systemctl list-unit-files | grep mysqld
@@ -543,7 +556,7 @@ systemctl enable mysqld.service
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"jdk、mysql安装、环境变量配置","level":"1.2.1","depth":2,"next":{"title":"HADOOP伪分布式搭建","level":"1.2.2","depth":2,"path":"build/1.hadoop伪分布式部署.md","ref":"build/1.hadoop伪分布式部署.md","articles":[]},"previous":{"title":"平台搭建","level":"1.2","depth":1,"ref":"","articles":[{"title":"jdk、mysql安装、环境变量配置","level":"1.2.1","depth":2,"path":"build/jdkmysql.md","ref":"build/jdkmysql.md","articles":[]},{"title":"HADOOP伪分布式搭建","level":"1.2.2","depth":2,"path":"build/1.hadoop伪分布式部署.md","ref":"build/1.hadoop伪分布式部署.md","articles":[]},{"title":"HADOOP完全分布式搭建","level":"1.2.3","depth":2,"path":"build/2.hadoop全分布式部署.md","ref":"build/2.hadoop全分布式部署.md","articles":[]},{"title":"HADOOPHA搭建","level":"1.2.4","depth":2,"path":"build/3.hadoopha部署.md","ref":"build/3.hadoopha部署.md","articles":[]},{"title":"HIVE搭建","level":"1.2.5","depth":2,"path":"build/4.hive组件部署.md","ref":"build/4.hive组件部署.md","articles":[]},{"title":"SQOOP搭建","level":"1.2.6","depth":2,"path":"build/5.sqoop组件部署.md","ref":"build/5.sqoop组件部署.md","articles":[]},{"title":"HBASE搭建","level":"1.2.7","depth":2,"path":"build/6.hbase组件部署.md","ref":"build/6.hbase组件部署.md","articles":[]},{"title":"FLUME搭建","level":"1.2.8","depth":2,"path":"build/7.flume组件部署.md","ref":"build/7.flume组件部署.md","articles":[]},{"title":"SPARK搭建","level":"1.2.9","depth":2,"path":"build/8.spark组件部署.md","ref":"build/8.spark组件部署.md","articles":[]},{"title":"KAFKA搭建","level":"1.2.10","depth":2,"path":"build/9.kafka组件部署.md","ref":"build/9.kafka组件部署.md","articles":[]},{"title":"STORM搭建","level":"1.2.11","depth":2,"path":"build/10.storm组件部署.md","ref":"build/10.storm组件部署.md","articles":[]},{"title":"ZOOKEEPER搭建","level":"1.2.12","depth":2,"path":"build/11.zookeeper组件部署.md","ref":"build/11.zookeeper组件部署.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"build/jdkmysql.md","mtime":"2019-06-18T12:56:45.185Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-06-18T13:02:22.890Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"jdk、mysql安装、环境变量配置","level":"1.2.1","depth":2,"next":{"title":"HADOOP伪分布式搭建","level":"1.2.2","depth":2,"path":"build/1.hadoop伪分布式部署.md","ref":"build/1.hadoop伪分布式部署.md","articles":[]},"previous":{"title":"平台搭建","level":"1.2","depth":1,"ref":"","articles":[{"title":"jdk、mysql安装、环境变量配置","level":"1.2.1","depth":2,"path":"build/jdkmysql.md","ref":"build/jdkmysql.md","articles":[]},{"title":"HADOOP伪分布式搭建","level":"1.2.2","depth":2,"path":"build/1.hadoop伪分布式部署.md","ref":"build/1.hadoop伪分布式部署.md","articles":[]},{"title":"HADOOP完全分布式搭建","level":"1.2.3","depth":2,"path":"build/2.hadoop全分布式部署.md","ref":"build/2.hadoop全分布式部署.md","articles":[]},{"title":"hadoopHa介绍","level":"1.2.4","depth":2,"path":"build/hadoopha.md","ref":"build/hadoopha.md","articles":[]},{"title":"HADOOPHA搭建","level":"1.2.5","depth":2,"path":"build/3.hadoopha部署.md","ref":"build/3.hadoopha部署.md","articles":[]},{"title":"HIVE搭建","level":"1.2.6","depth":2,"path":"build/4.hive组件部署.md","ref":"build/4.hive组件部署.md","articles":[]},{"title":"SQOOP搭建","level":"1.2.7","depth":2,"path":"build/5.sqoop组件部署.md","ref":"build/5.sqoop组件部署.md","articles":[]},{"title":"HBASE搭建","level":"1.2.8","depth":2,"path":"build/6.hbase组件部署.md","ref":"build/6.hbase组件部署.md","articles":[]},{"title":"FLUME搭建","level":"1.2.9","depth":2,"path":"build/7.flume组件部署.md","ref":"build/7.flume组件部署.md","articles":[]},{"title":"SPARK搭建","level":"1.2.10","depth":2,"path":"build/8.spark组件部署.md","ref":"build/8.spark组件部署.md","articles":[]},{"title":"KAFKA搭建","level":"1.2.11","depth":2,"path":"build/9.kafka组件部署.md","ref":"build/9.kafka组件部署.md","articles":[]},{"title":"STORM搭建","level":"1.2.12","depth":2,"path":"build/10.storm组件部署.md","ref":"build/10.storm组件部署.md","articles":[]},{"title":"ZOOKEEPER搭建","level":"1.2.13","depth":2,"path":"build/11.zookeeper组件部署.md","ref":"build/11.zookeeper组件部署.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"build/jdkmysql.md","mtime":"2019-12-05T13:39:42.313Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-12-06T00:54:08.939Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

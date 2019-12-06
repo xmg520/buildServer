@@ -155,7 +155,20 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.4" data-path="3.hadoopha部署.html">
+        <li class="chapter " data-level="1.2.4" data-path="hadoopha.html">
+            
+                <a href="hadoopha.html">
+            
+                    
+                    hadoopHa介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="3.hadoopha部署.html">
             
                 <a href="3.hadoopha部署.html">
             
@@ -168,7 +181,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.5" data-path="4.hive组件部署.html">
+        <li class="chapter " data-level="1.2.6" data-path="4.hive组件部署.html">
             
                 <a href="4.hive组件部署.html">
             
@@ -181,7 +194,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.6" data-path="5.sqoop组件部署.html">
+        <li class="chapter " data-level="1.2.7" data-path="5.sqoop组件部署.html">
             
                 <a href="5.sqoop组件部署.html">
             
@@ -194,7 +207,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.7" data-path="6.hbase组件部署.html">
+        <li class="chapter " data-level="1.2.8" data-path="6.hbase组件部署.html">
             
                 <a href="6.hbase组件部署.html">
             
@@ -207,7 +220,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.8" data-path="7.flume组件部署.html">
+        <li class="chapter " data-level="1.2.9" data-path="7.flume组件部署.html">
             
                 <a href="7.flume组件部署.html">
             
@@ -220,7 +233,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.9" data-path="8.spark组件部署.html">
+        <li class="chapter " data-level="1.2.10" data-path="8.spark组件部署.html">
             
                 <a href="8.spark组件部署.html">
             
@@ -233,7 +246,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.10" data-path="9.kafka组件部署.html">
+        <li class="chapter " data-level="1.2.11" data-path="9.kafka组件部署.html">
             
                 <a href="9.kafka组件部署.html">
             
@@ -246,7 +259,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.2.11" data-path="10.storm组件部署.html">
+        <li class="chapter active" data-level="1.2.12" data-path="10.storm组件部署.html">
             
                 <a href="10.storm组件部署.html">
             
@@ -259,7 +272,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.12" data-path="11.zookeeper组件部署.html">
+        <li class="chapter " data-level="1.2.13" data-path="11.zookeeper组件部署.html">
             
                 <a href="11.zookeeper组件部署.html">
             
@@ -397,8 +410,12 @@
 <blockquote>
 <p>&#x524D;&#x63D0;&#x6761;&#x4EF6;:<br>1.&#x5B89;&#x88C5;&#x914D;&#x7F6E;JDK1.8<br>2.&#x5B89;&#x88C5;&#x914D;&#x7F6E;Zookeeper&#x96C6;&#x7FA4;</p>
 </blockquote>
-<pre><code>&#x4F7F;&#x7528;&#x7684;zookeeper&#x96C6;&#x7FA4;&#x4E3A;&#xFF1A;192.168.188.5:2181,192.168.188.6:2181,192.168.188.7:2181
-&#x5E76;&#x4E14;zookeeper&#x96C6;&#x7FA4;&#x5DF2;&#x7ECF;&#x542F;&#x52A8;&#x6210;&#x529F;&#xFF1B;&#x4E0B;&#x9762;&#x5C06;&#x4EE5;192.168.188.10&#x670D;&#x52A1;&#x5668;&#x4E0A;&#x4E3A;&#x4F8B;&#xFF0C;&#x8BF4;&#x660E;storm&#x7684;&#x90E8;&#x7F72;&#x8FC7;&#x7A0B;&#xFF1A;
+<pre><code>&#x4F7F;&#x7528;&#x7684;zookeeper&#x96C6;&#x7FA4;&#x4E3A;&#xFF1A;
+192.168.188.5:2181,
+192.168.188.6:2181,
+192.168.188.7:2181
+&#x5E76;&#x4E14;zookeeper&#x96C6;&#x7FA4;&#x5DF2;&#x7ECF;&#x542F;&#x52A8;&#x6210;&#x529F;&#xFF1B;
+&#x4E0B;&#x9762;&#x5C06;&#x4EE5;192.168.188.10&#x670D;&#x52A1;&#x5668;&#x4E0A;&#x4E3A;&#x4F8B;&#xFF0C;&#x8BF4;&#x660E;storm&#x7684;&#x90E8;&#x7F72;&#x8FC7;&#x7A0B;&#xFF1A;
 </code></pre><h1 id="1&#x5B89;&#x88C5;storm">1.&#x5B89;&#x88C5;Storm</h1>
 <p>1.1 &#x89E3;&#x538B;storm&#x5230;&#x76EE;&#x5F55;/usr/local/storm</p>
 <pre><code>tar -zxf ./storm.tar.gz -C /usr/local/
@@ -437,7 +454,7 @@ storm supervisor
 storm ui &gt; /dev/null 2&gt;&amp;1 &amp;
 storm supervisor &gt; /dev/null 2&gt;&amp;1 &amp;
 </code></pre><p>5.&#x5728;&#x6D4F;&#x89C8;&#x5668;&#x4E2D;&#x8F93;&#x5165;&#x5730;&#x5740;&#xFF1A;<a href="http://192.168.188.10:8080/" target="_blank">http://192.168.188.10:8080/</a> &#xFF08;&#x5B9E;&#x9A8C;&#x7535;&#x8111;IP&#x4E3A;11.12.112.210&#x65E0;&#x9700;&#x5173;&#x6CE8;&#xFF09;
-<img src="https://img-blog.csdn.net/20170418172739492?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvaG91aml4aW4=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center" alt=""></p>
+<img src="http://tmp.wyjsjxh.com/201912060850_98.png" alt=""></p>
 
                                 
                                 </section>
@@ -481,7 +498,7 @@ storm supervisor &gt; /dev/null 2&gt;&amp;1 &amp;
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"STORM搭建","level":"1.2.11","depth":2,"next":{"title":"ZOOKEEPER搭建","level":"1.2.12","depth":2,"path":"build/11.zookeeper组件部署.md","ref":"build/11.zookeeper组件部署.md","articles":[]},"previous":{"title":"KAFKA搭建","level":"1.2.10","depth":2,"path":"build/9.kafka组件部署.md","ref":"build/9.kafka组件部署.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"build/10.storm组件部署.md","mtime":"2019-06-18T06:13:38.803Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-06-18T13:02:22.890Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"STORM搭建","level":"1.2.12","depth":2,"next":{"title":"ZOOKEEPER搭建","level":"1.2.13","depth":2,"path":"build/11.zookeeper组件部署.md","ref":"build/11.zookeeper组件部署.md","articles":[]},"previous":{"title":"KAFKA搭建","level":"1.2.11","depth":2,"path":"build/9.kafka组件部署.md","ref":"build/9.kafka组件部署.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"build/10.storm组件部署.md","mtime":"2019-12-06T00:50:08.573Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-12-06T00:54:08.939Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

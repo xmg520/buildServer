@@ -30,7 +30,7 @@ centos7默认安装jdk1.7版本，若配置需卸载原配置
 
 rpm -qa | grep jdk  
 
-![](http://tmp.mada8.com/201906142355_391.png)
+![](http://tmp.wyjsjxh.com/201906142355_391.png)
 
 > 卸载内置JDK  
 
@@ -56,7 +56,7 @@ export PATH=$PATH:$HADOOP_HOME/bin:$HADOOP_HOME/sbin
 
 
 ### 成功截图
-![](http://tmp.mada8.com/201906142359_636.png)
+![](http://tmp.wyjsjxh.com/201906142359_636.png)
 
 ----------
 # 三、CentOS7 离线安装mysql-5.7.16
@@ -133,7 +133,7 @@ mysql> FULSH PRIVILEGES;
 ```
 mysql> grant all privileges on *.* to 'root'@'%' identified by '1234' with grant option;
 
-mysql> flush privileges;
+mysql> FLUSH PRIVILEGES;
 ```
 ## 9 . 设置mysql开机启动
 ```

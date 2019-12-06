@@ -3,14 +3,13 @@
 
 # Hadoop1.X架构与2.X架构
 在Hadoop1.X版本时，官方架构图如下：
-![](https://upload-images.jianshu.io/upload_images/7013389-48623133ed631e5f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
-
+![](http://tmp.wyjsjxh.com/201912060850_722.png)
 hadoop1.X架构图
 
 从1.X的官方架构图可以看出，整个集群通过一个Namenode进行管理，可以想象，当集群中的Namenode节点挂掉是整个集群将不可用。
 
 2.X架构和1.X架构又有什么区别呢。我们来看2.X的架构：
-![](https://upload-images.jianshu.io/upload_images/7013389-e7e1c250738b443d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![](http://tmp.wyjsjxh.com/201912060850_974.png)
 
 Hadoop2.X架构图
 
@@ -45,7 +44,7 @@ HA其本质上就是要保证主备NN元数据是保持一致的，即保证fsim
 # QJM原理
 ## QJM介绍
 QJM全称是Quorum Journal Manager, 由JournalNode（JN）组成，一般是奇数点结点组成。每个JournalNode对外有一个简易的RPC接口，以供NameNode读写EditLog到JN本地磁盘。当写EditLog时，NameNode会同时向所有JournalNode并行写文件，只要有N/2+1结点写成功则认为此次写操作成功，遵循Paxos协议。其内部实现框架如下：
-![](https://upload-images.jianshu.io/upload_images/7013389-594e491b7b10a676.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![](http://tmp.wyjsjxh.com/201912060851_835.png)
 QJM内部实现
 
 从图中可看出，主要是涉及EditLog的不同管理对象和输出流对象，每种对象发挥着各自不同作用：
@@ -62,12 +61,13 @@ QJM内部实现
 上面提到EditLog，NameNode会把EditLog同时写到本地和JournalNode。写本地由配置中参数dfs.namenode.name.dir控制，写JN由参数dfs.namenode.shared.edits.dir控制，在写EditLog时会由两个不同的输出流来控制日志的写过程，分别为：EditLogFileOutputStream(本地输出流)和QuorumOutputStream(JN输出流)。写EditLog也不是直接写到磁盘中，为保证高吞吐，NameNode会分别为EditLogFileOutputStream和QuorumOutputStream定义两个同等大小的Buffer，大小大概是512KB，一个写Buffer(buffCurrent)，一个同步Buffer(buffReady)，这样可以一边写一边同步，所以EditLog是一个异步写过程，同时也是一个批量同步的过程，避免每写一笔就同步一次日志。
 
 这个是怎么实现边写边同步的呢，这中间其实是有一个缓冲区交换的过程，即bufferCurrent和buffReady在达到条件时会触发交换，如bufferCurrent在达到阈值同时bufferReady的数据又同步完时，bufferReady数据会清空，同时会将bufferCurrent指针指向bufferReady以满足继续写，另外会将bufferReady指针指向bufferCurrent以提供继续同步EditLog。上面过程用流程图就是表示如下：
-![](https://upload-images.jianshu.io/upload_images/7013389-ea30355e57ab0411.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![](http://tmp.wyjsjxh.com/201912060851_556.png)
 
 EditLog输出流程图
 
 # 主备切换机制
-![Failover流程图](https://upload-images.jianshu.io/upload_images/7013389-36f940edc3b91893.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![Failover流程图](http://tmp.wyjsjxh.com/201912060851_831.png)
+
 
 从图中可以看出，整个切换过程是由ZKFC来控制的，具体又可分为HealthMonitor、ZKFailoverController和ActiveStandbyElector三个组件。
 
@@ -90,4 +90,5 @@ EditLog输出流程图
 - Active ZKFC崩溃：虽然ZKFC是一个独立的进程，但因设计简单也容易出问题，一旦ZKFC进程挂掉，虽然此时NameNode是OK的，但系统也认为需要切换，此时SNN会发一个请求到ANN要求ANN放弃主结点位置，ANN收到请求后，会触发完成自动切换。
 - ZooKeeper崩溃：如果ZK崩溃了，主备NN上的ZKFC都会感知断连，此时主备NN会进入一个NeutralMode模式，同时不改变主备NN的状态，继续发挥作用，只不过此时，如果ANN也故障了，那集群无法发挥Failover, 也就不可用了，所以对于此种场景，ZK一般是不允许挂掉到多台，至少要有N/2+1台保持服务才算是安全的。
 HA机制总结
-# 上面介绍了下关于HadoopHA机制，归纳起来主要是两块：元数据同步和主备选举。元数据同步依赖于QJM共享存储，主备选举依赖于ZKFC和Zookeeper。整个过程还是比较复杂的，如果能理解Paxos协议，那也能更好的理解这个。
+# 上面介绍了下关于HadoopHA机制，归纳起来主要是两块：
+`元数据同步`和`主备选举`。元数据同步依赖于QJM共享存储，主备选举依赖于ZKFC和Zookeeper。整个过程还是比较复杂的，如果能理解Paxos协议，那也能更好的理解这个。

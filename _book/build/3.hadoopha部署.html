@@ -60,7 +60,7 @@
     <link rel="next" href="4.hive组件部署.html" />
     
     
-    <link rel="prev" href="2.hadoop全分布式部署.html" />
+    <link rel="prev" href="hadoopha.html" />
     
 
     </head>
@@ -155,7 +155,20 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.2.4" data-path="3.hadoopha部署.html">
+        <li class="chapter " data-level="1.2.4" data-path="hadoopha.html">
+            
+                <a href="hadoopha.html">
+            
+                    
+                    hadoopHa介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2.5" data-path="3.hadoopha部署.html">
             
                 <a href="3.hadoopha部署.html">
             
@@ -168,7 +181,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.5" data-path="4.hive组件部署.html">
+        <li class="chapter " data-level="1.2.6" data-path="4.hive组件部署.html">
             
                 <a href="4.hive组件部署.html">
             
@@ -181,7 +194,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.6" data-path="5.sqoop组件部署.html">
+        <li class="chapter " data-level="1.2.7" data-path="5.sqoop组件部署.html">
             
                 <a href="5.sqoop组件部署.html">
             
@@ -194,7 +207,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.7" data-path="6.hbase组件部署.html">
+        <li class="chapter " data-level="1.2.8" data-path="6.hbase组件部署.html">
             
                 <a href="6.hbase组件部署.html">
             
@@ -207,7 +220,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.8" data-path="7.flume组件部署.html">
+        <li class="chapter " data-level="1.2.9" data-path="7.flume组件部署.html">
             
                 <a href="7.flume组件部署.html">
             
@@ -220,7 +233,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.9" data-path="8.spark组件部署.html">
+        <li class="chapter " data-level="1.2.10" data-path="8.spark组件部署.html">
             
                 <a href="8.spark组件部署.html">
             
@@ -233,7 +246,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.10" data-path="9.kafka组件部署.html">
+        <li class="chapter " data-level="1.2.11" data-path="9.kafka组件部署.html">
             
                 <a href="9.kafka组件部署.html">
             
@@ -246,7 +259,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.11" data-path="10.storm组件部署.html">
+        <li class="chapter " data-level="1.2.12" data-path="10.storm组件部署.html">
             
                 <a href="10.storm组件部署.html">
             
@@ -259,7 +272,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.12" data-path="11.zookeeper组件部署.html">
+        <li class="chapter " data-level="1.2.13" data-path="11.zookeeper组件部署.html">
             
                 <a href="11.zookeeper组件部署.html">
             
@@ -395,7 +408,7 @@
                                 
                                 <h1 id="hadoop&#x9AD8;&#x53EF;&#x7528;&#x73AF;&#x5883;&#x90E8;&#x7F72;">hadoop&#x9AD8;&#x53EF;&#x7528;&#x73AF;&#x5883;&#x90E8;&#x7F72;</h1>
 <h1 id="hadoopha&#x90E8;&#x7F72;">HADOOPHA&#x90E8;&#x7F72;</h1>
-<p><a href="hadoopha.md">HADOOPHA(&#x9AD8;&#x53EF;&#x7528;)&#x4ECB;&#x7ECD;</a></p>
+<p><a href="hadoopha.html">HADOOPHA(&#x9AD8;&#x53EF;&#x7528;)&#x4ECB;&#x7ECD;</a></p>
 <blockquote>
 <p>&#x524D;&#x63D0; <strong> &#x53CD;&#x590D;&#x642D;&#x5EFA; hadoop &#x5B8C;&#x5168;&#x5206;&#x5E03;&#x5F0F; </strong> &#x719F;&#x7EC3;&#x914D;&#x7F6E;&#x6587;&#x4EF6;</p>
 <h1 id="hadoopha&#x96C6;&#x7FA4;&#x642D;&#x5EFA;">HadoopHA&#x96C6;&#x7FA4;&#x642D;&#x5EFA;</h1>
@@ -481,6 +494,7 @@
         &lt;name&gt;dfs.replication&lt;/name&gt;
         &lt;value&gt;3&lt;/value&gt;
 &lt;/property&gt;
+# HDFS&#x6587;&#x4EF6;&#x6743;&#x9650;
 &lt;property&gt;
         &lt;name&gt;dfs.permissions.enabled&lt;/name&gt;
         &lt;value&gt;false&lt;/value&gt;
@@ -687,7 +701,7 @@ hdfs hadoop fs -lsr /test
 
             
                 
-                <a href="2.hadoop全分布式部署.html" class="navigation navigation-prev " aria-label="Previous page: HADOOP完全分布式搭建">
+                <a href="hadoopha.html" class="navigation navigation-prev " aria-label="Previous page: hadoopHa介绍">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
@@ -703,7 +717,7 @@ hdfs hadoop fs -lsr /test
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"HADOOPHA搭建","level":"1.2.4","depth":2,"next":{"title":"HIVE搭建","level":"1.2.5","depth":2,"path":"build/4.hive组件部署.md","ref":"build/4.hive组件部署.md","articles":[]},"previous":{"title":"HADOOP完全分布式搭建","level":"1.2.3","depth":2,"path":"build/2.hadoop全分布式部署.md","ref":"build/2.hadoop全分布式部署.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"build/3.hadoopha部署.md","mtime":"2019-06-18T09:30:40.435Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-06-18T13:02:22.890Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"HADOOPHA搭建","level":"1.2.5","depth":2,"next":{"title":"HIVE搭建","level":"1.2.6","depth":2,"path":"build/4.hive组件部署.md","ref":"build/4.hive组件部署.md","articles":[]},"previous":{"title":"hadoopHa介绍","level":"1.2.4","depth":2,"path":"build/hadoopha.md","ref":"build/hadoopha.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"build/3.hadoopha部署.md","mtime":"2019-06-24T03:10:20.534Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-12-06T00:54:08.939Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

@@ -5,20 +5,20 @@
 
 ### 文档中包含大数据平台组件
 ```
-hadoop
-mysql
-hive
-hbase
-sqoop
-spark
-flume
-kafka
-storm
-zookeeper
+Hadoop
+Mysql
+Hive
+Hbase
+Sqoop
+Spark
+Flume
+Kafka
+Storm
+Zookeeper
 ```
 ### 数据采集
 ```python
-flume
+Flume
 python:
     urlib
     requests
