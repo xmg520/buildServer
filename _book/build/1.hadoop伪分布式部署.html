@@ -411,129 +411,138 @@
 <p>&#x7CFB;&#x7EDF;&#xFF1A;centos7-x &#x8F6F;&#x4EF6;&#xFF1A;hadoop2.6.0&#x3001;JDK8</p>
 <blockquote>
 <p>&#x524D;&#x63D0;&#xFF1A;&#x914D;&#x7F6E;&#x514D;&#x5BC6;&#x767B;&#x9646;</p>
-<ol>
-<li>&#x64CD;&#x4F5C;&#x6307;&#x4EE4;
-```
-ssh localhost</li>
-</ol>
 </blockquote>
-<p>ssh-keygen -t rsa</p>
-<p>cat ~/.ssh/id_rsa.pub &gt; ~/.ssh/authorized_keys</p>
-<pre><code>
-## &#x6210;&#x529F;&#x622A;&#x56FE;
-![](http://tmp.wyjsjxh.com/201906142256_119.png)
+<ol>
+<li>&#x64CD;&#x4F5C;&#x6307;&#x4EE4;</li>
+</ol>
+<pre><code>ssh localhost
 
----
+ssh-keygen -t rsa
 
-# &#x96C6;&#x7FA4;&#x89C4;&#x5212;
-ip&#x5730;&#x5740;|&#x4E3B;&#x673A;&#x540D;|&#x5B89;&#x88C5;&#x8F6F;&#x4EF6;|&#x8FDB;&#x7A0B;
--|-|-|-|
-192.168.188.4|master|hadoop&#x3001;jdk8|NameNode&#x3001; DataNode&#x3001;SecondaryNameNode
+cat ~/.ssh/id_rsa.pub &gt; ~/.ssh/authorized_keys
+</code></pre><h2 id="&#x6210;&#x529F;&#x622A;&#x56FE;">&#x6210;&#x529F;&#x622A;&#x56FE;</h2>
+<p><img src="http://tmp.wyjsjxh.com/201906142256_119.png" alt=""></p>
+<hr>
+<h1 id="&#x96C6;&#x7FA4;&#x89C4;&#x5212;">&#x96C6;&#x7FA4;&#x89C4;&#x5212;</h1>
+<table>
+<thead>
+<tr>
+<th>ip&#x5730;&#x5740;</th>
+<th>&#x4E3B;&#x673A;&#x540D;</th>
+<th>&#x5B89;&#x88C5;&#x8F6F;&#x4EF6;</th>
+<th>&#x8FDB;&#x7A0B;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>192.168.188.4</td>
+<td>master</td>
+<td>hadoop&#x3001;jdk8</td>
+<td>NameNode&#x3001; DataNode&#x3001;SecondaryNameNode</td>
+</tr>
+</tbody>
+</table>
+<p>&#x4E00;&#x3001;&#x89E3;&#x538B;hadoop&#x6587;&#x4EF6;</p>
+<blockquote>
+<p>&#x8BB0;&#x4F4F;&#x89E3;&#x538B;&#x3001;&#x538B;&#x7F29;gz &#x6587;&#x4EF6;&#x547D;&#x4EE4;  </p>
+</blockquote>
+<pre><code>tar -zxf /mnt/dsj/hadoop-xxx.tar.gz -C /usr/local/
 
-
-&#x4E00;&#x3001;&#x89E3;&#x538B;hadoop&#x6587;&#x4EF6;
-&gt; &#x8BB0;&#x4F4F;&#x89E3;&#x538B;&#x3001;&#x538B;&#x7F29;gz &#x6587;&#x4EF6;&#x547D;&#x4EE4;
-</code></pre><p>tar -zxf /mnt/dsj/hadoop-xxx.tar.gz -C /usr/local/</p>
-<p>mv /usr/local/hadoop-xxx /usr/local/hadoop</p>
-<pre><code>
-&#x5728;`~/.bashrc`&#x914D;&#x7F6E;&#x73AF;&#x5883;&#x53D8;&#x91CF;&#xFF1A;&#x5B9E;&#x73B0;&#x4EC5;&#x4E3A;`&#x5F53;&#x524D;&#x7528;&#x6237;`&#x8BBE;&#x7F6E;&#x73AF;&#x5883;&#x53D8;&#x91CF;
-</code></pre><p>export HADOOP_HOME=/usr/local/hadoop
-export PATH=$PATH:$HADOOP_HOME/bin:$HADOOP_HOME/sbin</p>
-<pre><code>&#x6700;&#x540E;&#x4F7F;&#x4FEE;&#x6539;&#x751F;&#x6548;&#xFF1A;source ~/.bashrc
-## &#x6210;&#x529F;&#x622A;&#x56FE;
-
-&#x4E8C;&#x3001;&#x4FEE;&#x6539;hadoop&#x914D;&#x7F6E;&#x6587;&#x4EF6;  
-- hadoop-env.sh
-- yarn-env.sh
-- core-site.xml
-- hdfs-site.xml
-- yarn-site.xml
-- mapred-site.xml
-
-1. hadoop-env.sh &#x914D;&#x7F6E;  
-
-&#x4E24;&#x4E2A;env.sh&#x6587;&#x4EF6;&#x4E3B;&#x8981;&#x662F;&#x914D;&#x7F6E;JDK&#x7684;&#x4F4D;&#x7F6E;  
-[&#x600E;&#x4E48;&#x914D;&#x7F6E;jdk&#xFF1F;](0.jdk&#x5B89;&#x88C5;+&#x73AF;&#x5883;&#x53D8;&#x91CF;&#x914D;&#x7F6E;(&#x6240;&#x6709;&#x7EC4;&#x4EF6;&#x901A;&#x7528;).md)  
-&#x63D0;&#x793A;&#xFF1A;&#x5982;&#x679C;&#x5FD8;&#x8BB0;&#x4E86;JDK&#x7684;&#x4F4D;&#x7F6E;&#x4E86;&#xFF0C;&#x8F93;&#x5165; echo $JAVA_HOME&#x5C31;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x54E6;&#x3002;  
-&#x7F16;&#x8F91;`hadoop-env.sh`,`yarn-env.sh`&#x5206;&#x522B;&#x63D2;&#x5165;&#x4EE5;&#x4E0B;&#x4EE3;&#x7801;
-</code></pre><p>export JAVA_HOME=/usr/local/java</p>
-<pre><code>
-
-2. core-site.xml
-</code></pre><p><configuration>
-    <property><br>        <name>fs.defaultFS</name>
-        <value>hdfs://master:9000</value>
-        <description>HDFS&#x7684;URI&#xFF0C;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;://namenode&#x6807;&#x8BC6;:&#x7AEF;&#x53E3;&#x53F7;</description>
-    </property>
-    <property><br>        <name>hadoop.tmp.dir</name>
-        <value>/usr/local/hadoop/tmp</value>
-        <description>namenode&#x4E0A;&#x672C;&#x5730;&#x7684;hadoop&#x4E34;&#x65F6;&#x6587;&#x4EF6;&#x5939;</description>  
-    </property></configuration></p>
-<p>&lt;/configuration&gt;</p>
-<pre><code>
-3. hdfs-site.xml
-</code></pre><p><configuration> 
-    <property>
-        <name>dfs.namenode.name.dir</name>
-        <value>/usr/local/hadoop/tmp/dfs/name</value>
-        <description>namenode&#x4E0A;&#x5B58;&#x50A8;hdfs&#x540D;&#x5B57;&#x7A7A;&#x95F4;&#x5143;&#x6570;&#x636E; </description>
-    </property>
-    <property>
-        <name>dfs.datanode.data.dir</name>
-        <value>/usr/local/hadoop/tmp/dfs/data</value>
-        <description>datanode&#x4E0A;&#x6570;&#x636E;&#x5757;&#x7684;&#x7269;&#x7406;&#x5B58;&#x50A8;&#x4F4D;&#x7F6E;</description>
-    </property>
-    <property>
-        <name>dfs.replication</name>
-        <value>1</value>
-        <description>hadoop&#x6570;&#x636E;&#x5907;&#x4EFD;&#x6570;</description>
-    </property>
-</configuration></p>
-<pre><code>4. yarn-site.xml
-</code></pre><p><configuration>
-    <property>
-        <name>yarn.nodemanager.aux-services</name>
-        <value>mapreduce_shuffle</value>
-    </property>
-    <property>
-        <name>yarn.resourcemanager.webapp.address</name>
-        <value>master:50070</value>
-        <description>&#x8FD9;&#x4E2A;&#x5730;&#x5740;&#x662F;mr&#x7BA1;&#x7406;&#x754C;&#x9762;&#x7684;</description>
-    </property>
-</configuration></p>
-<pre><code>5. mapred-site.xml(&#x53BB;&#x9664;&#x540E;&#x7F00;.template)
-</code></pre><p><configuration>
-    <property>
-        <name>mapreduce.framework.name</name>
-        <value>yarn</value>
-        <description>mapreduce.framework.name&#x6307;&#x7684;&#x662F;&#x4F7F;&#x7528;yarn&#x8FD0;&#x884C;mapreduce&#x7A0B;&#x5E8F;&#x3002;</description> 
-    </property>
-</configuration></p>
-<pre><code>## &#x521B;&#x5EFA;&#x6587;&#x4EF6;&#x5939;
-&#x6211;&#x4EEC;&#x5728;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x4E2D;&#x914D;&#x7F6E;&#x4E86;&#x4E00;&#x4E9B;&#x6587;&#x4EF6;&#x5939;&#x8DEF;&#x5F84;&#xFF0C;&#x73B0;&#x5728;&#x6211;&#x4EEC;&#x6765;&#x521B;&#x5EFA;&#x4ED6;&#x4EEC;&#xFF0C;&#x5728;`/usr/local/hadoop/`&#x76EE;&#x5F55;&#x4E0B;&#x64CD;&#x4F5C;&#xFF0C;&#x5EFA;&#x7ACB;`tmp`&#x3001;`/tmp/dfs/name`&#x3001;`/tmp/dfs/data`&#x76EE;&#x5F55;&#xFF0C;&#x6267;&#x884C;&#x5982;&#x4E0B;&#x547D;&#x4EE4; &#xFF1A;
-</code></pre><p>mkdir /usr/local/hadoop/tmp 
+mv /usr/local/hadoop-xxx /usr/local/hadoop
+</code></pre><p>&#x5728;<code>~/.bashrc</code>&#x914D;&#x7F6E;&#x73AF;&#x5883;&#x53D8;&#x91CF;&#xFF1A;&#x5B9E;&#x73B0;&#x4EC5;&#x4E3A;<code>&#x5F53;&#x524D;&#x7528;&#x6237;</code>&#x8BBE;&#x7F6E;&#x73AF;&#x5883;&#x53D8;&#x91CF;</p>
+<pre><code>export HADOOP_HOME=/usr/local/hadoop
+export PATH=$PATH:$HADOOP_HOME/bin:$HADOOP_HOME/sbin
+</code></pre><p>&#x6700;&#x540E;&#x4F7F;&#x4FEE;&#x6539;&#x751F;&#x6548;&#xFF1A;source ~/.bashrc</p>
+<h2 id="&#x6210;&#x529F;&#x622A;&#x56FE;">&#x6210;&#x529F;&#x622A;&#x56FE;</h2>
+<p>&#x4E8C;&#x3001;&#x4FEE;&#x6539;hadoop&#x914D;&#x7F6E;&#x6587;&#x4EF6;  </p>
+<ul>
+<li>hadoop-env.sh</li>
+<li>yarn-env.sh</li>
+<li>core-site.xml</li>
+<li>hdfs-site.xml</li>
+<li>yarn-site.xml</li>
+<li><p>mapred-site.xml</p>
+</li>
+<li><p>hadoop-env.sh &#x914D;&#x7F6E;  </p>
+</li>
+</ul>
+<p>&#x4E24;&#x4E2A;env.sh&#x6587;&#x4EF6;&#x4E3B;&#x8981;&#x662F;&#x914D;&#x7F6E;JDK&#x7684;&#x4F4D;&#x7F6E;<br><a href="jdkmysql.html">&#x600E;&#x4E48;&#x914D;&#x7F6E;jdk&#xFF1F;</a><br>&#x63D0;&#x793A;&#xFF1A;&#x5982;&#x679C;&#x5FD8;&#x8BB0;&#x4E86;JDK&#x7684;&#x4F4D;&#x7F6E;&#x4E86;&#xFF0C;&#x8F93;&#x5165; <code>echo $JAVA_HOME</code>&#x5C31;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x54E6;&#x3002;<br>&#x7F16;&#x8F91;<code>hadoop-env.sh</code>,<code>yarn-env.sh</code>&#x5206;&#x522B;&#x63D2;&#x5165;&#x4EE5;&#x4E0B;&#x4EE3;&#x7801;</p>
+<pre><code>export JAVA_HOME=/usr/local/java
+</code></pre><ol>
+<li><p>core-site.xml</p>
+<pre><code>&lt;configuration&gt;
+ &lt;property&gt;    
+     &lt;name&gt;fs.defaultFS&lt;/name&gt;
+     &lt;value&gt;hdfs://master:9000&lt;/value&gt;
+     &lt;description&gt;HDFS&#x7684;URI&#xFF0C;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;://namenode&#x6807;&#x8BC6;:&#x7AEF;&#x53E3;&#x53F7;&lt;/description&gt;
+ &lt;/property&gt;
+ &lt;property&gt;    
+     &lt;name&gt;hadoop.tmp.dir&lt;/name&gt;
+     &lt;value&gt;/usr/local/hadoop/tmp&lt;/value&gt;
+     &lt;description&gt;namenode&#x4E0A;&#x672C;&#x5730;&#x7684;hadoop&#x4E34;&#x65F6;&#x6587;&#x4EF6;&#x5939;&lt;/description&gt;  
+ &lt;/property&gt;
+&lt;/configuration&gt;
+</code></pre></li>
+<li><p>hdfs-site.xml</p>
+<pre><code>&lt;configuration&gt; 
+ &lt;property&gt;
+     &lt;name&gt;dfs.namenode.name.dir&lt;/name&gt;
+     &lt;value&gt;/usr/local/hadoop/tmp/dfs/name&lt;/value&gt;
+     &lt;description&gt;namenode&#x4E0A;&#x5B58;&#x50A8;hdfs&#x540D;&#x5B57;&#x7A7A;&#x95F4;&#x5143;&#x6570;&#x636E; &lt;/description&gt;
+ &lt;/property&gt;
+ &lt;property&gt;
+     &lt;name&gt;dfs.datanode.data.dir&lt;/name&gt;
+     &lt;value&gt;/usr/local/hadoop/tmp/dfs/data&lt;/value&gt;
+     &lt;description&gt;datanode&#x4E0A;&#x6570;&#x636E;&#x5757;&#x7684;&#x7269;&#x7406;&#x5B58;&#x50A8;&#x4F4D;&#x7F6E;&lt;/description&gt;
+ &lt;/property&gt;
+ &lt;property&gt;
+     &lt;name&gt;dfs.replication&lt;/name&gt;
+     &lt;value&gt;1&lt;/value&gt;
+     &lt;description&gt;hadoop&#x6570;&#x636E;&#x5907;&#x4EFD;&#x6570;&lt;/description&gt;
+ &lt;/property&gt;
+&lt;/configuration&gt;
+</code></pre></li>
+<li>yarn-site.xml<pre><code>&lt;configuration&gt;
+ &lt;property&gt;
+     &lt;name&gt;yarn.nodemanager.aux-services&lt;/name&gt;
+     &lt;value&gt;mapreduce_shuffle&lt;/value&gt;
+ &lt;/property&gt;
+ &lt;property&gt;
+     &lt;name&gt;yarn.resourcemanager.webapp.address&lt;/name&gt;
+     &lt;value&gt;master:50070&lt;/value&gt;
+     &lt;description&gt;&#x8FD9;&#x4E2A;&#x5730;&#x5740;&#x662F;mr&#x7BA1;&#x7406;&#x754C;&#x9762;&#x7684;&lt;/description&gt;
+ &lt;/property&gt;
+&lt;/configuration&gt;
+</code></pre></li>
+<li>mapred-site.xml(&#x53BB;&#x9664;&#x540E;&#x7F00;.template)<pre><code>&lt;configuration&gt;
+ &lt;property&gt;
+     &lt;name&gt;mapreduce.framework.name&lt;/name&gt;
+     &lt;value&gt;yarn&lt;/value&gt;
+     &lt;description&gt;mapreduce.framework.name&#x6307;&#x7684;&#x662F;&#x4F7F;&#x7528;yarn&#x8FD0;&#x884C;mapreduce&#x7A0B;&#x5E8F;&#x3002;&lt;/description&gt; 
+ &lt;/property&gt;
+&lt;/configuration&gt;
+</code></pre></li>
+</ol>
+<h2 id="&#x521B;&#x5EFA;&#x6587;&#x4EF6;&#x5939;">&#x521B;&#x5EFA;&#x6587;&#x4EF6;&#x5939;</h2>
+<p>&#x6211;&#x4EEC;&#x5728;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x4E2D;&#x914D;&#x7F6E;&#x4E86;&#x4E00;&#x4E9B;&#x6587;&#x4EF6;&#x5939;&#x8DEF;&#x5F84;&#xFF0C;&#x73B0;&#x5728;&#x6211;&#x4EEC;&#x6765;&#x521B;&#x5EFA;&#x4ED6;&#x4EEC;&#xFF0C;&#x5728;<code>/usr/local/hadoop/</code>&#x76EE;&#x5F55;&#x4E0B;&#x64CD;&#x4F5C;&#xFF0C;&#x5EFA;&#x7ACB;<code>tmp</code>&#x3001;<code>/tmp/dfs/name</code>&#x3001;<code>/tmp/dfs/data</code>&#x76EE;&#x5F55;&#xFF0C;&#x6267;&#x884C;&#x5982;&#x4E0B;&#x547D;&#x4EE4; &#xFF1A;</p>
+<pre><code>mkdir /usr/local/hadoop/tmp 
 mkdir /usr/local/hadoop/tmp/dfs/data 
-mkdir /usr/local/hadoop/tmp/dfs/name</p>
-<pre><code># &#x9A8C;&#x8BC1;
-
-&#x73B0;&#x5728;&#x914D;&#x7F6E;&#x5DE5;&#x4F5C;&#x5DF2;&#x7ECF;&#x57FA;&#x672C;&#x641E;&#x5B9A;&#xFF0C;&#x63A5;&#x4E0B;&#x6765;&#x53EA;&#x9700;&#x8981;&#x5B8C;&#x6210;&#xFF1A;  
-1.&#x683C;&#x5F0F;&#x5316;HDFS&#x6587;&#x4EF6;&#x3001;2.&#x542F;&#x52A8;hadoop&#x3001;3.&#x9A8C;&#x8BC1;Hadoop &#x5373;&#x53EF;
-
-## &#x683C;&#x5F0F;&#x5316;
-&#x5728;&#x4F7F;&#x7528;Hadoop&#x4E4B;&#x524D;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x683C;&#x5F0F;&#x5316;&#x4E00;&#x4E9B;hadoop&#x7684;&#x57FA;&#x672C;&#x4FE1;&#x606F;&#x3002; &#x4F7F;&#x7528;&#x5982;&#x4E0B;&#x547D;&#x4EE4;&#xFF1A;
-</code></pre><p>hadoop namenode -format</p>
-<pre><code>### &#x6210;&#x529F;&#x622A;&#x56FE;
-![](https://upload-images.jianshu.io/upload_images/7013389-959f6b44020ffa98.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)  
-
-&#x542F;&#x52A8;Hadoop
-&#x63A5;&#x4E0B;&#x6765;&#x6211;&#x4EEC;&#x542F;&#x52A8;Hadoop&#xFF1A;
-</code></pre><p>start-dfs.sh
-```</p>
-<p>&#x4E4B;&#x540E;&#x5982;&#x679C;&#x4F60;&#x662F;&#x56FE;&#x5F62;&#x5316;&#x754C;&#x9762;&#xFF0C;&#x53EF;&#x4EE5;&#x5728;&#x4F60;&#x865A;&#x62DF;&#x673A;&#x7684;&#x56FE;&#x5F62;&#x5316;&#x754C;&#x9762;&#x4E2D;&#x6253;&#x5F00;&#x706B;&#x72D0;&#x6D4F;&#x89C8;&#x5668;&#x8F93;&#x5165;&#xFF1A;<a href="http://localhost:50070/" target="_blank">http://localhost:50070/</a> &#x6216;&#x8005;&#x5728;windows&#x673A;&#x5668;&#x4E0A;&#x8F93;&#x5165;<a href="http://&#x865A;&#x62DF;&#x673A;ip&#x5730;&#x5740;:50070/" target="_blank">http://&#x865A;&#x62DF;&#x673A;ip&#x5730;&#x5740;:50070/</a> &#x4E5F;&#x53EF;&#x4EE5;&#x8BBF;&#x95EE; hadoop&#x7684;&#x7BA1;&#x7406;&#x9875;&#x9762;</p>
+mkdir /usr/local/hadoop/tmp/dfs/name
+</code></pre><h1 id="&#x9A8C;&#x8BC1;">&#x9A8C;&#x8BC1;</h1>
+<p>&#x73B0;&#x5728;&#x914D;&#x7F6E;&#x5DE5;&#x4F5C;&#x5DF2;&#x7ECF;&#x57FA;&#x672C;&#x641E;&#x5B9A;&#xFF0C;&#x63A5;&#x4E0B;&#x6765;&#x53EA;&#x9700;&#x8981;&#x5B8C;&#x6210;&#xFF1A;<br>1.&#x683C;&#x5F0F;&#x5316;HDFS&#x6587;&#x4EF6;&#x3001;2.&#x542F;&#x52A8;hadoop&#x3001;3.&#x9A8C;&#x8BC1;Hadoop &#x5373;&#x53EF;</p>
+<h2 id="&#x683C;&#x5F0F;&#x5316;">&#x683C;&#x5F0F;&#x5316;</h2>
+<p>&#x5728;&#x4F7F;&#x7528;Hadoop&#x4E4B;&#x524D;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x683C;&#x5F0F;&#x5316;&#x4E00;&#x4E9B;hadoop&#x7684;&#x57FA;&#x672C;&#x4FE1;&#x606F;&#x3002; &#x4F7F;&#x7528;&#x5982;&#x4E0B;&#x547D;&#x4EE4;&#xFF1A;  </p>
+<pre><code>hadoop namenode -format
+</code></pre><h3 id="&#x6210;&#x529F;&#x622A;&#x56FE;">&#x6210;&#x529F;&#x622A;&#x56FE;</h3>
+<p><img src="http://tmp.wyjsjxh.com/201912060846_406.png" alt=""></p>
+<p>&#x542F;&#x52A8;Hadoop
+&#x63A5;&#x4E0B;&#x6765;&#x6211;&#x4EEC;&#x542F;&#x52A8;Hadoop&#xFF1A;</p>
+<pre><code>start-dfs.sh
+</code></pre><p>&#x4E4B;&#x540E;&#x5982;&#x679C;&#x4F60;&#x662F;&#x56FE;&#x5F62;&#x5316;&#x754C;&#x9762;&#xFF0C;&#x53EF;&#x4EE5;&#x5728;&#x4F60;&#x865A;&#x62DF;&#x673A;&#x7684;&#x56FE;&#x5F62;&#x5316;&#x754C;&#x9762;&#x4E2D;&#x6253;&#x5F00;&#x706B;&#x72D0;&#x6D4F;&#x89C8;&#x5668;&#x8F93;&#x5165;&#xFF1A;<a href="http://localhost:50070/" target="_blank">http://localhost:50070/</a> &#x6216;&#x8005;&#x5728;windows&#x673A;&#x5668;&#x4E0A;&#x8F93;&#x5165;<a href="http://&#x865A;&#x62DF;&#x673A;ip&#x5730;&#x5740;:50070/" target="_blank">http://&#x865A;&#x62DF;&#x673A;ip&#x5730;&#x5740;:50070/</a> &#x4E5F;&#x53EF;&#x4EE5;&#x8BBF;&#x95EE; hadoop&#x7684;&#x7BA1;&#x7406;&#x9875;&#x9762;</p>
 <blockquote>
 <p>&#x4F8B;&#x56FE;&#x8BBE;&#x7F6E;&#x7684;&#x4E3A;9870&#x7AEF;&#x53E3;  </p>
 </blockquote>
-<p><img src="https://upload-images.jianshu.io/upload_images/7013389-a79fc86b86825305.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p><img src="http://tmp.wyjsjxh.com/201912060846_273.png" alt=""></p>
 
                                 
                                 </section>
@@ -577,7 +586,7 @@ mkdir /usr/local/hadoop/tmp/dfs/name</p>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"HADOOP伪分布式搭建","level":"1.2.2","depth":2,"next":{"title":"HADOOP完全分布式搭建","level":"1.2.3","depth":2,"path":"build/2.hadoop全分布式部署.md","ref":"build/2.hadoop全分布式部署.md","articles":[]},"previous":{"title":"jdk、mysql安装、环境变量配置","level":"1.2.1","depth":2,"path":"build/jdkmysql.md","ref":"build/jdkmysql.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"build/1.hadoop伪分布式部署.md","mtime":"2019-12-05T13:23:28.896Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-12-06T00:54:08.939Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"HADOOP伪分布式搭建","level":"1.2.2","depth":2,"next":{"title":"HADOOP完全分布式搭建","level":"1.2.3","depth":2,"path":"build/2.hadoop全分布式部署.md","ref":"build/2.hadoop全分布式部署.md","articles":[]},"previous":{"title":"jdk、mysql安装、环境变量配置","level":"1.2.1","depth":2,"path":"build/jdkmysql.md","ref":"build/jdkmysql.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"build/1.hadoop伪分布式部署.md","mtime":"2019-12-06T01:06:44.439Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-12-06T01:02:11.024Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
